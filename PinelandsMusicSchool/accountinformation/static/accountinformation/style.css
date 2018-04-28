@@ -1,0 +1,126 @@
+.content_container {
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+}
+
+.logo {
+    width: 80px;
+    height: 120px;
+    float: left;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.pinelands_title {
+    float: left;
+}
+
+div.account_login {
+    margin-top: 50px;
+    margin-right: 15px;
+    float: right;
+}
+
+div.account_login_text {
+    float: right;
+}
+
+p.login_text {
+    margin: auto;
+    margin-left: 10px;
+    color: #2E0571;
+}
+
+.profile_pic {
+    width: 60px;
+    height: auto;
+    margin: auto;
+    float: left;
+}
+
+.welcome_pic {
+    width: 100%;
+    height: auto;
+}
+
+div.header {
+    height: 150px;
+    width: 100%;
+    max-width: 1024px;
+    background-color: #7C45D6;
+	margin: auto;
+}
+
+h.pinelands {
+    color: #2E0571;
+    font-size: 30pt;
+    margin-left 100px;
+}
+
+div.footer {
+	background-color: #7C45D6;
+	margin: auto;
+	width: 100%;
+	max-width: 1024px;
+	float: bottom;
+}
+
+p.footer_text {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 15px;
+    color: #2E0571;
+}
+
+h.section_header {
+    color: #2E0571;
+    font-size: 16pt;
+}
+
+/* https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black */
+.nav_bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #946BD6;
+}
+
+.nav_bar_button {
+    float: left;
+}
+
+.nav_bar_button_text {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #2E0571;
+}
+
+.nav_bar_button_text:hover {
+    background-color: #FFFFFF;
+}
+
+/* https://www.w3schools.com/howto/howto_css_three_columns.asp */
+.column {
+    width: 33.33%;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
