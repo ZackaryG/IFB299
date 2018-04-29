@@ -3,7 +3,7 @@
 <head>
    {% load static %}
 
-    <link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'accountinformation/style.css' %}" />
     <meta http-equiv="cache-control" content="no-cache">
     <meta charset="UTF-8">
     <title>Pinelands Music School</title>
@@ -12,14 +12,14 @@
     <div class="content_container">
         <div class="header">
 
-            <a href=""><img src="../../../static/Pictures/Pinelands_Logo_Placeholder.jpg" alt="School logo" class="logo"></a>
+            <a href="/"><img src="../../../static/Pictures/Pinelands_Logo_Placeholder.jpg" alt="School logo" class="logo"></a>
 
             <div class="pinelands_title">
                 <h class="pinelands">Pinelands<br>Music<br>School</h>
             </div>
 
             <div class="account_login">
-                <a href="accountinformation"><img src="../../../static/Pictures/Student_Profile.jpg" alt="Student's profile picture" class="profile_pic"></a>
+                <a href=""><img src="../../../static/Pictures/Student_Profile.jpg" alt="Students profile picture" class="profile_pic"></a>
                 <div class="account_login_text">
                     <a href=""><p class="login_text">Kermit</p></a>
                     <a href=""><p class="login_text">Log Out</p></a>
@@ -40,25 +40,20 @@
             <li class="nav_bar_button"><a href="" class="nav_bar_button_text">Button Five</a></li>
         </ul>
 
-        <img src="../../../static/Pictures/Homepage_Picture_Placeholder.jpg" alt="Students learning" class="welcome_pic">
+        <div class="account_header">
+            <h class="account_header_title">Kermit's Timetable</h>
+        </div>
 
-        <div class="row">
+        <ul class="nav_bar">
+            <li class="nav_bar_button"><a href="/accountinformation" class="nav_bar_button_text">Personal Details</a></li>
 
-            <div class="column">
-                <h class="section_header">Column One</h><br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum, ante id auctor facilisis, magna lacus vehicula sem, eget vulputate.
-            </div>
+            <li class="nav_bar_button"><a href="/accountinformation/timetable" class="nav_bar_button_text">Time Table</a></li>
 
-            <div class="column">
-                <h class="section_header">Column Two</h><br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum, ante id auctor facilisis, magna lacus vehicula sem, eget vulputate.
-            </div>
+            <li class="nav_bar_button"><a href="/accountinformation/educationplan" class="nav_bar_button_text">Education Plan</a></li>
+        </ul>
 
-            <div class="column">
-                <h class="section_header">Column Three</h><br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum, ante id auctor facilisis, magna lacus vehicula sem, eget vulputate.
-            </div>
-
+        <div class="detail_container">
+            <br><h class="detail_header">Insert Timetable Here</h><br>
         </div>
 
         <div class="footer">

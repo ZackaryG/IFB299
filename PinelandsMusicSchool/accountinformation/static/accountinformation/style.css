@@ -112,15 +112,53 @@ h.section_header {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
-
 @media screen and (max-width: 600px) {
     .column {
         width: 100%;
     }
 }
-
 .row:after {
     content: "";
     display: table;
     clear: both;
+}
+
+div.account_header {
+    height: 75px;
+    width: 100%;
+    max-width: 1024px;
+    background-color: #7C45D6;
+	margin: auto;
+}
+
+h.account_header_title {
+    color: #2E0571;
+    font-size: 20pt;
+    float: left;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+div.detail_container{
+    background-color: white;
+    width: 100%;
+    max-width: 1024px;
+    min-height: 200px;
+}
+
+h.detail_header {
+    color: #2E0571;
+    font-size: 12pt;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.detail_text {
+    font-size: 12pt;
+    margin-left: 15px;
+}
+
+.divider {
+    width: 100%;
+    max-width: 1024;
 }
