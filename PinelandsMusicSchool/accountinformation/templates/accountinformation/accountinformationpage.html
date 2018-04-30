@@ -21,7 +21,7 @@
             <div class="account_login">
                 <a href=""><img src="../../../static/Pictures/Student_Profile.jpg" alt="Students profile picture" class="profile_pic"></a>
                 <div class="account_login_text">
-                    <a href=""><p class="login_text">Kermit</p></a>
+                    <a href=""><p class="login_text">{{ a_student.firstname }} {{ a_student.lastname }}</p></a>
                     <a href=""><p class="login_text">Log Out</p></a>
                 </div>
             </div>
@@ -59,7 +59,10 @@
             <img src="../../../static/Pictures/divider.jpg" alt="Line dividing sections" class="divider">
             <h class="detail_header">About You</h><br>
 
-            <p class="detail_text">Name: Kermit</p>
+            <p class="detail_text">First Name: {{ a_student.firstname }}</p>
+            <p class="detail_text">Last Name: {{ a_student.lastname }}</p>
+            <p class="detail_text">Date of Birth: {{ a_student.DOB }}</p>
+            <p class="detail_text">Gender: {{ a_student.gender }}</p>
         </div>
 
         <div class="footer">
