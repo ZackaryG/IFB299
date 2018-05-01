@@ -14,7 +14,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
+            <state relative-caret-position="-1531">
               <caret line="44" column="47" lean-forward="true" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
             </state>
           </provider>
@@ -44,6 +44,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/home/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -68,20 +80,19 @@
         <option value="$PROJECT_DIR$/accountinformation/urls.py" />
         <option value="$PROJECT_DIR$/accountinformation/templates/accountinformation/timetable.html" />
         <option value="$PROJECT_DIR$/accountinformation/templates/accountinformation/educationplan.html" />
-        <option value="$PROJECT_DIR$/home/admin.py" />
         <option value="$PROJECT_DIR$/home/templates/home/homepage.html" />
         <option value="$PROJECT_DIR$/accountinformation/templates/accountinformation/accountinformationpage.html" />
         <option value="$PROJECT_DIR$/accountinformation/views.py" />
         <option value="$PROJECT_DIR$/home/views.py" />
         <option value="$PROJECT_DIR$/home/models.py" />
+        <option value="$PROJECT_DIR$/home/admin.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-967" />
-    <option name="y" value="1" />
-    <option name="width" value="974" />
-    <option name="height" value="1046" />
+    <option name="x" value="952" />
+    <option name="width" value="1220" />
+    <option name="height" value="1298" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -232,12 +243,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-967" y="1" width="974" height="1046" extended-state="0" />
-    <editor active="true" />
+    <frame x="762" y="0" width="976" height="1038" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22651356" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" visible="true" weight="0.32977587" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" visible="true" weight="0.3355049" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
@@ -607,12 +617,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home/admin.py">
+    <entry file="file://$PROJECT_DIR$/home/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -627,19 +637,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home/views.py">
+    <entry file="file://$PROJECT_DIR$/home/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="153">
+          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding>
-            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/home/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
+        <state relative-caret-position="-1531">
           <caret line="44" column="47" lean-forward="true" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
         </state>
       </provider>
