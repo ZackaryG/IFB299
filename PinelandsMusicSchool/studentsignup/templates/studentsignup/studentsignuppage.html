@@ -4,6 +4,8 @@
    {% load static %}
 
     <link rel="stylesheet" type="text/css" href="{% static 'studentsignup/style.css' %}" />
+    <script type ="text/javascript" src="../../static/studentsignup/functions.js"></script>
+    <!-- <script type ="text/javascript" href="{% static 'studentsignup/style.css' %}"></script> -->
     <meta http-equiv="cache-control" content="no-cache">
     <meta charset="UTF-8">
     <title>Pinelands Music School</title>
@@ -34,8 +36,8 @@
 
         <div class="signup_container">
 
-            <div class="signup_button">
-                <a href="" class="signup_button_text">Signup Now</a>
+            <div class="signup_button" onclick="overlayOn()">
+                <a class="signup_button_text">Signup Now</a>
             </div>
 
             <br><h class="detail_header">Receive A Quality Education</h><br>
@@ -43,6 +45,10 @@
             <br><h class="detail_header">Details and Cost</h><br>
             <p class="detail_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum, ante id auctor facilisis, magna lacus vehicula sem, eget vulputate.</p>
 
+        </div>
+
+        <div id="overlay">
+            <div class="signup_form_container"></div>
         </div>
 
         <div class="footer">
