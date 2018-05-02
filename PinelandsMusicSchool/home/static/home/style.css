@@ -112,15 +112,74 @@ h.section_header {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
-
 @media screen and (max-width: 600px) {
     .column {
         width: 100%;
     }
 }
-
 .row:after {
     content: "";
     display: table;
     clear: both;
+}
+
+/* Member information page formatting */
+div.account_header {
+    height: 75px;
+    width: 100%;
+    max-width: 1024px;
+    background-color: #7C45D6;
+	margin: auto;
+}
+
+h.account_header_title {
+    color: #2E0571;
+    font-size: 20pt;
+    float: left;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+div.detail_container{
+    background-color: white;
+    width: 100%;
+    max-width: 1024px;
+    min-height: 200px;
+}
+
+h.detail_header {
+    color: #2E0571;
+    font-size: 12pt;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.detail_text {
+    font-size: 12pt;
+    margin-left: 15px;
+}
+
+.divider {
+    width: 100%;
+    max-width: 1024;
+}
+
+/* Student signup page formatting */
+.signup_button {
+    float: left;
+    width: 100;
+    height: 50;
+}
+
+.signup_button_text {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #2E0571;
+}
+
+.signup_button_text:hover {
+    background-color: #FFFFFF;
 }
