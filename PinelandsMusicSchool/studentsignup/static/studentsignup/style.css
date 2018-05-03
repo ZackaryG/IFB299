@@ -227,3 +227,20 @@ div.signup_form_container{
     border-width: 2px;
     border-width: black;
 }
+
+.submit_button{
+    float: center;
+    width: 150px;
+    height: 50px;
+    background-color: #946BD6;
+    font-size: 16pt;
+    left_margin: 10px;
+    top_margin: 10px;
+    color: #2E0571;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+}
+.submit_button:hover {
+    background-color: #FFFFFF;
+}
