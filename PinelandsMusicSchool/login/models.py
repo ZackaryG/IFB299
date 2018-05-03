@@ -74,11 +74,14 @@ class Member(AbstractBaseUser):
     REQUIRED_FIELDS = ['first_name', 'last_name', 'dob'] # Email & Password are required by default.
 
     def get_full_name(self):
-        # The user is identified by their email address
+        '''
+        Getter method for user's name
+        :return: user's name
+        '''
         full_name = self.first_name + ' ' + self.last_name
         return full_name
 
-    def __str__(self):              # __unicode__ on Python 2
+    def __str__(self):
         full_name = self.first_name + ' ' + self.last_name
         return full_name
 
