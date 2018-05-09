@@ -166,11 +166,17 @@ h.detail_header {
 
 /* Student signup page formatting */
 .signup_button {
+	border:none;
+    float: center;
     width: 150px;
     height: 50px;
     background-color: #946BD6;
+    font-size: 16pt;
     left_margin: 10px;
     top_margin: 10px;
+    color: #2E0571;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .signup_button_text {
@@ -183,7 +189,7 @@ h.detail_header {
     color: #2E0571;
 }
 
-.signup_button_text:hover {
+.signup_button:hover {
     background-color: #FFFFFF;
 }
 
@@ -229,6 +235,7 @@ div.signup_form_container{
 }
 
 .submit_button{
+	border:none;
     float: center;
     width: 150px;
     height: 50px;
@@ -239,7 +246,6 @@ div.signup_form_container{
     color: #2E0571;
     text-decoration: none;
     cursor: pointer;
-    border: none;
 }
 .submit_button:hover {
     background-color: #FFFFFF;
