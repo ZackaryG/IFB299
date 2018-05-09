@@ -10,7 +10,7 @@ class RegisterForm(forms.ModelForm):
 
     class Meta:
         model = Member
-        fields = ('email',)
+        fields = ('email', 'first_name', 'last_name')
 
     def clean_email(self):
         '''
@@ -41,7 +41,7 @@ class UserAdminCreationForm(forms.ModelForm):
 
     class Meta:
         model = Member
-        fields = ('email',)
+        fields = ('email', 'first_name', 'last_name')
 
     def clean_password2(self):
         # Check that the two password entries match

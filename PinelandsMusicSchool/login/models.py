@@ -50,6 +50,15 @@ class UserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
+    # def create_student(self, email, first_name, password):
+    #     user = self.create_user(
+    #         email,
+    #         first_name,
+    #         password=password,
+    #     )
+    #
+    #     user.user_permissions.set()
+
 class Member(AbstractBaseUser):
     email = models.EmailField(
         verbose_name = 'email address',
@@ -72,6 +81,13 @@ class Member(AbstractBaseUser):
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['first_name', 'last_name', 'dob'] # Email & Password are required by default.
+
+    # User metadata
+    # class Meta:
+    #     permissions = (
+    #         ('student', 'Student'),
+    #         ('teacher', 'Teacher'),
+    #     )
 
     def get_full_name(self):
         '''
