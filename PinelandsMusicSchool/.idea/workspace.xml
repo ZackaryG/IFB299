@@ -11,53 +11,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="studentsignuppage.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studentsignup/templates/studentsignup/studentsignuppage.html">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PinelandsMusicSchool/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+            <state relative-caret-position="277">
+              <caret line="78" column="13" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studentsignup/urls.py">
+      <file leaf-file-name="homepage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/home/templates/home/homepage.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
-              <folding>
-                <element signature="e#644#676#0" expanded="true" />
-              </folding>
+              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studentsignup/static/studentsignup/functions.js">
+      <file leaf-file-name="accountinformationpage.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/accountinformation/templates/accountinformation/accountinformationpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="182" selection-start-line="11" selection-start-column="182" selection-end-line="11" selection-end-column="182" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/home/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="155" column="37" lean-forward="true" selection-end-line="164" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studentsignup/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="66" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="391">
+              <caret line="23" column="59" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -101,11 +77,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-73" />
-    <option name="y" value="-25" />
-    <option name="width" value="1690" />
-    <option name="height" value="1104" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1274" />
+    <option name="y" value="14" />
+    <option name="width" value="1218" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -113,7 +89,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,43 +99,49 @@
             <path>
               <item name="PinelandsMusicSchool" type="b2602c69:ProjectViewProjectNode" />
               <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
+              <item name="accountinformation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PinelandsMusicSchool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
+              <item name="accountinformation" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PinelandsMusicSchool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
+              <item name="accountinformation" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="accountinformation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PinelandsMusicSchool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
               <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PinelandsMusicSchool" type="b2602c69:ProjectViewProjectNode" />
               <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
-              <item name="studentsignup" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PinelandsMusicSchool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
-              <item name="studentsignup" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PinelandsMusicSchool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
-              <item name="studentsignup" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="studentsignup" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PinelandsMusicSchool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
-              <item name="studentsignup" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PinelandsMusicSchool" type="b2602c69:ProjectViewProjectNode" />
               <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
-              <item name="studentsignup" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="studentsignup" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PinelandsMusicSchool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
+              <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -169,16 +150,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zacka\Documents\GitHub\IFB299\PinelandsMusicSchool\home\static\home" />
+      <recent name="C:\Users\zacka\Documents\GitHub\IFB299\PinelandsMusicSchool\home" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\zacka\Documents\GitHub\IFB299\PinelandsMusicSchool\studentsignup\static\accountinformation" />
       <recent name="C:\Users\zacka\Documents\GitHub\IFB299\PinelandsMusicSchool\accountinformation\static\accountinformation" />
       <recent name="C:\Users\zacka\Documents\GitHub\IFB299\PinelandsMusicSchool\home\static\home" />
       <recent name="C:\Users\zacka\Documents\GitHub\IFB299\PinelandsMusicSchool\studentsignup" />
       <recent name="C:\Users\zacka\Documents\GitHub\IFB299\PinelandsMusicSchool\accountinformation\templates\accountinformation" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\zacka\Documents\GitHub\IFB299\PinelandsMusicSchool\home\static\home" />
-      <recent name="C:\Users\zacka\Documents\GitHub\IFB299\PinelandsMusicSchool\home" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -207,11 +188,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-1274" y="14" width="1218" height="1038" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17708333" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17138103" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50039524" side_tool="true" weight="0.28464818" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" visible="true" weight="0.2583423" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -220,12 +201,22 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17708333" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50039524" side_tool="true" weight="0.28464818" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49960473" weight="0.32942432" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -489,8 +480,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PinelandsMusicSchool/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        <state relative-caret-position="277">
+          <caret line="78" column="13" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -518,8 +509,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home/templates/home/homepage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="48" column="164" lean-forward="true" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="164" />
+        <state relative-caret-position="306">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -532,8 +523,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/accountinformation/templates/accountinformation/accountinformationpage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+        <state relative-caret-position="391">
+          <caret line="23" column="59" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -541,9 +532,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="66" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -558,9 +546,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
-          <folding>
-            <element signature="e#644#676#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
