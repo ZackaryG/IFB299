@@ -24,9 +24,9 @@ class UserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-    def create_staffuser(self, email, first_name, last_name, dob, password):
+    def create_teacher(self, email, first_name, last_name, dob, password):
         """
-        Creates and saves a staff user with the given email and password.
+        Creates and saves a teacher
         """
         user = self.create_user(
             email,
@@ -36,10 +36,32 @@ class UserManager(BaseUserManager):
             password=password,
         )
 
-        user.first_name = first_name
-        user.staff = True
+        user.is_teacher = True
         user.save(using=self._db)
         return user
+
+    def create_student(self, email, first_name, last_name, dob, password):
+        """
+        Creates and saves a student account
+        :param email:
+        :param first_name:
+        :param last_name:
+        :param dob:
+        :param password:
+        :return:
+        """
+        user = self.create_user(
+            email,
+            first_name,
+            last_name,
+            dob,
+            password=password,
+        )
+
+        user.is_teacher = False
+        user.save(using=self._db)
+        return user
+
 
     def create_superuser(self, email, first_name, last_name, dob, password):
         """
@@ -88,7 +110,8 @@ class Member(AbstractBaseUser):
     active = models.BooleanField(default=True)
     staff = models.BooleanField(default=False) # a admin user; non super-user
     admin = models.BooleanField(default=False) # a superuser
-    # notice the absence of a "Password field", that's built in.
+    is_teacher = models.BooleanField(default=False)
+
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['first_name', 'last_name', 'dob'] # Email & Password are required by default.
