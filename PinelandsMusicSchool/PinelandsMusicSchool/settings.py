@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'PinelandsMusicSchool.wsgi.application'
 
 DATABASES = {
     'default': {        
-        'ENGINE': 'django.db.backends.mysql', 
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'puppies',
         'USER': 'root',
         'PASSWORD': 'password',
