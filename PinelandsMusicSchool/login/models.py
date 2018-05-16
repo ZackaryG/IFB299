@@ -36,7 +36,7 @@ class UserManager(BaseUserManager):
             password=password,
         )
 
-        user.is_teacher = True
+        user.teacher = True
         user.save(using=self._db)
         return user
 
@@ -58,7 +58,7 @@ class UserManager(BaseUserManager):
             password=password,
         )
 
-        user.is_teacher = False
+        user.teacher = False
         user.save(using=self._db)
         return user
 
@@ -110,7 +110,7 @@ class Member(AbstractBaseUser):
     active = models.BooleanField(default=True)
     staff = models.BooleanField(default=False) # a admin user; non super-user
     admin = models.BooleanField(default=False) # a superuser
-    is_teacher = models.BooleanField(default=False)
+    teacher = models.BooleanField(default=False)
 
 
     USERNAME_FIELD = 'email'
@@ -124,6 +124,12 @@ class Member(AbstractBaseUser):
             ('admin', 'Admin'),
         )
 
+    def get_first_name(self):
+        return self.first_name
+
+    def get_last_name(self):
+        return self.last_name
+
     def get_full_name(self):
         '''
         Getter method for user's name
@@ -131,6 +137,20 @@ class Member(AbstractBaseUser):
         '''
         full_name = self.first_name + ' ' + self.last_name
         return full_name
+
+    def get_dob(self):
+        '''
+        Getter method for member's DOB
+        :return: Date of birth ('YYYY-MM-DD')
+        '''
+        return self.dob
+
+    def get_email(self):
+        '''
+        Getter method for member's email
+        :return: Member's email
+        '''
+        return self.email
 
     def __str__(self):
         full_name = self.first_name + ' ' + self.last_name
@@ -160,3 +180,7 @@ class Member(AbstractBaseUser):
     def is_active(self):
         "Is the user active?"
         return self.active
+
+    @property
+    def is_teacher(self):
+        return self.teacher
