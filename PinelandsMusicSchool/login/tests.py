@@ -1,19 +1,20 @@
 from django.test import TestCase
-from login.models import *
+from login.models import UserManager, Member
 
 # Run tests in shell by entering the following command:
 # 'python manage.py test login
 
 # Create your tests here.
 class UserModelTests(TestCase):
-    global email, first_name, last_name, password
+    global email, first_name, last_name, dob, password
 
     email = 'ass@butt.com'
     first_name = 'Heywood'
     last_name = 'Jablowme'
+    dob = '1969-08-02'
+    password = 'qqqgqq'
 
     def test_create_user(self):
-        manager = UserManager()
-        user = manager.create_user(email='ass@butt.com', first_name='Heywood', password = 'qqqgqq')
+        user = Member.objects.create_user(email=email, first_name=first_name, last_name = last_name, dob=dob, password=password)
 
-        assert(type(user) == "<class 'Member'>")
+        self.assertIsInstance(user, Member)

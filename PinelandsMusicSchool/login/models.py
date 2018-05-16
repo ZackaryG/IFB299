@@ -1,11 +1,12 @@
 from django.db import models
+from django.contrib.auth.models import Group, Permission
 from django.contrib.auth.models import (
     BaseUserManager, AbstractBaseUser
 )
 # Create your models here.
 
 class UserManager(BaseUserManager):
-    def create_user(self, email, first_name, password=None):
+    def create_user(self, email, first_name, last_name, dob, password=None):
         """
         Creates and saves a User with the given email and password.
         """
@@ -17,16 +18,21 @@ class UserManager(BaseUserManager):
         )
 
         user.first_name = first_name
+        user.last_name = last_name
+        user.dob = dob
         user.set_password(password)
         user.save(using=self._db)
         return user
 
-    def create_staffuser(self, email, first_name, password):
+    def create_staffuser(self, email, first_name, last_name, dob, password):
         """
         Creates and saves a staff user with the given email and password.
         """
         user = self.create_user(
             email,
+            first_name,
+            last_name,
+            dob,
             password=password,
         )
 
@@ -35,19 +41,24 @@ class UserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, email, first_name, password):
+    def create_superuser(self, email, first_name, last_name, dob, password):
         """
         Creates and saves a superuser with the given email and password.
         """
         user = self.create_user(
             email,
             first_name,
+            last_name,
+            dob,
             password=password,
         )
 
         user.staff = True
         user.admin = True
+        #user.user_permissions.set(['student'])
         user.save(using=self._db)
+
+
         return user
 
     # def create_student(self, email, first_name, password):
@@ -57,7 +68,7 @@ class UserManager(BaseUserManager):
     #         password=password,
     #     )
     #
-    #     user.user_permissions.set()
+    #     user.user_permissions.set(['student'])
 
 class Member(AbstractBaseUser):
     email = models.EmailField(
@@ -83,11 +94,12 @@ class Member(AbstractBaseUser):
     REQUIRED_FIELDS = ['first_name', 'last_name', 'dob'] # Email & Password are required by default.
 
     # User metadata
-    # class Meta:
-    #     permissions = (
-    #         ('student', 'Student'),
-    #         ('teacher', 'Teacher'),
-    #     )
+    class Meta:
+        permissions = (
+            ('student', 'Student'),
+            ('teacher', 'Teacher'),
+            ('admin', 'Admin'),
+        )
 
     def get_full_name(self):
         '''
