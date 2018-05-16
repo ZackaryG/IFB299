@@ -4,6 +4,7 @@
    {% load static %}
 
     <link rel="stylesheet" type="text/css" href="{% static 'instrumentmanagement/style.css' %}" />
+    <script type ="text/javascript" src="../../static/instrumentmanagement/Functions.js"></script>
     <meta http-equiv="cache-control" content="no-cache">
     <meta charset="UTF-8">
     <title>Pinelands Music School</title>
@@ -66,10 +67,33 @@
                     <td>$20</td>
                     <td>$200</td>
                     <!-- Can add this to allow managers to update the table once permissions are a go -->
-                    <!--<td><a href="">Edit</a></td>-->
+                    <td><a href="">Edit</a></td>
                 </tr>
             </tbody>
         </table>
+
+        <button class="add_instrument_button" onclick="overlayOn()">
+            Add New
+        </button><br><br>
+
+        <div id="overlay">
+            <div class="instrument_form_container">
+                Add New Instrument<br><br>
+
+                <form onsubmit="formComplete()">
+                    Instrument<input type="text" name="Instrument" required><br><br>
+                    Size<input type="text" name="Size" required><br><br>
+                    Condition<input type="text" name="Condition" required><br><br>
+                    Available<input type="text" name="Available" required><br><br>
+                    Rental Price<input type="text" name="RentalPrice" required><br><br>
+                    Sale Price<input type="text" name="SalePrice" required><br><br>
+                    <input type="submit" name="submit" value="Submit" class="add_instrument_button">
+                </form><br>
+				<button class="add_instrument_button" onclick="overlayOff()">
+					Cancel
+				</button>
+            </div>
+        </div>
 
         <div class="footer">
             <br>
