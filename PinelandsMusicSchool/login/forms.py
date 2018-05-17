@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
-
+import datetime
 from .models import Member
 
 
@@ -36,12 +36,52 @@ class RegisterForm(forms.ModelForm):
 class UserAdminCreationForm(forms.ModelForm):
     """A form for creating new users. Includes all the required
     fields, plus a repeated password."""
+    first_name = forms.CharField(label ='First Name', widget=forms.CharField)
+    last_name = forms.CharField(label='Last Name', widget = forms.CharField)
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
     password2 = forms.CharField(label='Password confirmation', widget=forms.PasswordInput)
 
     class Meta:
         model = Member
-        fields = ('email', 'first_name', 'last_name')
+        fields = ('email', 'first_name', 'last_name', 'dob')
+
+    def clean_first_name(self):
+        '''
+        Check first name is valid (only characters or spaces).
+        Raises Validation error if name is not valid.
+        :return: First name, if first name is valid
+        '''
+        first_name = self.cleaned_data.get('first_name')
+        if not all(x.isalpha() or x.isspace() for x in first_name):
+            raise forms.ValidationError('First name is invalid. Please only use letters, and spaces.')
+        return first_name
+
+    def clean_last_name(self):
+        '''
+        Check first name is valid (only characters or spaces).
+        Raises Validation error if name is not valid.
+        :return: First name, if first name is valid
+        '''
+        last_name = self.cleaned_data.get('last_name')
+        if not all(x.isalpha() or x.isspace() for x in last_name):
+            raise forms.ValidationError('Last name is invalid. Please only use letters, and spaces.')
+        return last_name
+
+    def clean_dob(self):
+        '''
+        Check if Date of Birth entered is a valid format ('yyyy-mm-dd')
+        Raises Validation Error
+        :return: DOB, if valid.
+        '''
+        dob = self.cleaned_data.get('dob')
+        day, month, year = dob.split('-')
+
+        try:
+            datetime.datetime(int(year), int(month), int(day))
+        except ValueError:
+            raise forms.ValidationError('Date is invalid. Please use the format "yyyy-mm-dd"')
+
+        return dob
 
     def clean_password2(self):
         # Check that the two password entries match

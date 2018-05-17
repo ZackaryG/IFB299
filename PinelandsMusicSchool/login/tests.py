@@ -1,5 +1,7 @@
 from django.test import TestCase
 from login.models import UserManager, Member
+from login.forms import UserAdminCreationForm
+from django.contrib.auth import authenticate
 
 # Run tests in shell by entering the following command:
 # 'python manage.py test login
@@ -30,3 +32,24 @@ class UserModelTests(TestCase):
 
         self.assertIsInstance(student, Member)
         assert(student.is_teacher == False)
+        assert (student.get_full_name() == first_name + ' ' + last_name)  # Test name was created successfully
+        assert (student.get_first_name() == first_name)
+        assert (student.get_last_name() == last_name)
+        assert (student.get_dob() == dob)  # Test DOB was recorded successfully
+        assert (student.get_email() == email)  # Test email was recorded
+
+    def test_login(self):
+        user = Member.objects.create_student(email, first_name, last_name, dob, password)
+
+        # Failed login
+        wrongUser = authenticate(username = email, password = 'wrongpassword')
+        assert (user != wrongUser)
+
+        #
+        rightUser = authenticate(username = email, password = password)
+        assert(rightUser == user)
+
+class TestForms(TestCase):
+
+    def test_admin_form(self):
+        form = UserAdminCreationForm()
