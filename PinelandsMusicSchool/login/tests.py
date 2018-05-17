@@ -1,6 +1,6 @@
 from django.test import TestCase
 from login.models import UserManager, Member
-from login.forms import UserAdminCreationForm
+from login.forms import *
 from django.contrib.auth import authenticate
 
 # Run tests in shell by entering the following command:
@@ -50,6 +50,26 @@ class UserModelTests(TestCase):
         assert(rightUser == user)
 
 class TestForms(TestCase):
+    global valid_data
+
+    valid_data = {'email': 'ass@butt.com',
+                  'first_name': 'Heywood',
+                  'last_name': 'Jablowme',
+                  'dob': '1969-08-02',
+                  'password1': 'qqqgqq',
+                  'password2': 'qqqgqq'}
+
 
     def test_admin_form(self):
-        form = UserAdminCreationForm()
+        form = UserAdminCreationForm(valid_data)
+        assert(form.is_valid())
+
+    def test_registration_form(self):
+        form = RegisterForm(valid_data)
+
+        print(form.is_valid())
+        print(form.clean_email())
+        print(form.clean_first_name())
+        print(form.clean_last_name())
+        print(form.clean_dob())
+        print(form.clean_password2())
