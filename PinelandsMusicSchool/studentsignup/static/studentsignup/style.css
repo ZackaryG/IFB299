@@ -1,0 +1,252 @@
+.content_container {
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+}
+
+.logo {
+    width: 80px;
+    height: 120px;
+    float: left;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.pinelands_title {
+    float: left;
+}
+
+div.account_login {
+    margin-top: 50px;
+    margin-right: 15px;
+    float: right;
+}
+
+div.account_login_text {
+    float: right;
+}
+
+p.login_text {
+    margin: auto;
+    margin-left: 10px;
+    color: #2E0571;
+}
+
+.profile_pic {
+    width: 60px;
+    height: auto;
+    margin: auto;
+    float: left;
+}
+
+.welcome_pic {
+    width: 100%;
+    height: auto;
+}
+
+div.header {
+    height: 150px;
+    width: 100%;
+    max-width: 1024px;
+    background-color: #7C45D6;
+	margin: auto;
+}
+
+h.pinelands {
+    color: #2E0571;
+    font-size: 30pt;
+    margin-left 100px;
+}
+
+div.footer {
+	background-color: #7C45D6;
+	margin: auto;
+	width: 100%;
+	max-width: 1024px;
+	float: bottom;
+}
+
+p.footer_text {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 15px;
+    color: #2E0571;
+}
+
+h.section_header {
+    color: #2E0571;
+    font-size: 16pt;
+}
+
+/* https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black */
+.nav_bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #946BD6;
+}
+
+.nav_bar_button {
+    float: left;
+}
+
+.nav_bar_button_text {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #2E0571;
+}
+
+.nav_bar_button_text:hover {
+    background-color: #FFFFFF;
+}
+
+/* https://www.w3schools.com/howto/howto_css_three_columns.asp */
+.column {
+    width: 33.33%;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Member information page formatting */
+div.account_header {
+    height: 75px;
+    width: 100%;
+    max-width: 1024px;
+    background-color: #7C45D6;
+	margin: auto;
+}
+
+h.account_header_title {
+    color: #2E0571;
+    font-size: 20pt;
+    float: left;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+div.detail_container{
+    background-color: white;
+    width: 100%;
+    max-width: 1024px;
+    min-height: 200px;
+}
+
+h.detail_header {
+    color: #2E0571;
+    font-size: 12pt;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.detail_text {
+    font-size: 12pt;
+    margin-left: 15px;
+}
+
+.divider {
+    width: 100%;
+    max-width: 1024;
+}
+
+/* Student signup page formatting */
+.signup_button {
+	border:none;
+    float: center;
+    width: 150px;
+    height: 50px;
+    background-color: #946BD6;
+    font-size: 16pt;
+    left_margin: 10px;
+    top_margin: 10px;
+    color: #2E0571;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.signup_button_text {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 16pt;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #2E0571;
+}
+
+.signup_button:hover {
+    background-color: #FFFFFF;
+}
+
+div.signup_container{
+    float: left;
+    left_margin: 10px;
+    top_margin: 10px;
+    background-color: white;
+    width: 100%;
+    max-width: 1024px;
+    min-height: 200px;
+}
+
+/* https://www.w3schools.com/howto/howto_css_overlay.asp */
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    /*cursor: pointer; /* Add a pointer on hover */
+}
+
+div.signup_form_container{
+    position: fixed;
+    width: 60%;
+    min-width: 400;
+    max-width: 614;
+    height: 80%;
+    min-height: 500;
+    max-height: 573;
+    top: 10%;
+    left: 20%;
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-width: black;
+}
+
+.submit_button{
+	border:none;
+    float: center;
+    width: 150px;
+    height: 50px;
+    background-color: #946BD6;
+    font-size: 16pt;
+    left_margin: 10px;
+    top_margin: 10px;
+    color: #2E0571;
+    text-decoration: none;
+    cursor: pointer;
+}
+.submit_button:hover {
+    background-color: #FFFFFF;
+}
