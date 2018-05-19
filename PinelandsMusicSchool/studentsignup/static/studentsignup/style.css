@@ -219,6 +219,7 @@ div.signup_container{
 }
 
 div.signup_form_container{
+    overflow: scroll;
     position: fixed;
     width: 60%;
     min-width: 400;
@@ -234,9 +235,14 @@ div.signup_form_container{
     border-width: black;
 }
 
+.signup_form{
+    left_margin: 10px;
+    top_margin: 10px;
+}
+
 .submit_button{
 	border:none;
-    float: center;
+    float: left;
     width: 150px;
     height: 50px;
     background-color: #946BD6;
@@ -248,5 +254,22 @@ div.signup_form_container{
     cursor: pointer;
 }
 .submit_button:hover {
+    background-color: #FFFFFF;
+}
+
+.cancel_button{
+	border:none;
+    float: right;
+    width: 150px;
+    height: 50px;
+    background-color: #946BD6;
+    font-size: 16pt;
+    left_margin: 10px;
+    top_margin: 10px;
+    color: #2E0571;
+    text-decoration: none;
+    cursor: pointer;
+}
+.cancel_button:hover {
     background-color: #FFFFFF;
 }

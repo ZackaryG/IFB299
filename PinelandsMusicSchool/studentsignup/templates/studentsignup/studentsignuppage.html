@@ -36,9 +36,11 @@
 
         <div class="signup_container">
 
+            <br>
             <button class="signup_button" onclick="overlayOn()">
 				Signup Now
             </button>
+            <br>
 
             <br><h class="detail_header">Receive A Quality Education</h><br>
             <p class="detail_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum, ante id auctor facilisis, magna lacus vehicula sem, eget vulputate.</p>
@@ -49,29 +51,31 @@
 
         <div id="overlay">
             <div class="signup_form_container">
-                <form onsubmit="formComplete()">
-                    First Name<input type="text" name="FirstName" required><br><br>
-                    Last Name<input type="text" name="Last Name" required><br><br>
-                    Date of Birth<input type="date" name="DOB" required><br><br>
-                    Street Number<input type="text" name="StreetNumber" required><br><br>
-                    Street Name<input type="text" name="StreetName" required><br><br>
-                    Suburb<input type="text" name="Suburb" required><br><br>
-                    Postcode<input type="number" name="Postcode" size="4" required><br><br>
-                    Gender<br>
-					<input type="radio" name="Gender" value="Other" checked><br>
-                    <input type="radio" name="Gender" value="Female"><br>
-                    <input type="radio" name="Gender" value="Male"><br><br>
-                    Phone<input type="number" name="Phone" size="10" required><br><br>
-                    Facebook<input type="text" name="Facebook" required><br><br>
-                    Email<input type="email" name="Email" required><br><br>
-                    Contact Preferance<input type="text" name="ContactPreferance" required><br><br>
-                    Password<input type="password" name="Password" required><br><br>
-                    Confirm Password<input type="password" name="ConfirmPassword" required><br><br>
-                    <input type="submit" name="submit" value="Submit" class="submit_button">
-                </form>
-				<button class="signup_button" onclick="overlayOff()">
-					Cancel
-				</button>
+                <div class="signup_form">
+                    <form onsubmit="formComplete()" class="signup_form">
+                        First Name<input type="text" name="FirstName" required><br><br>
+                        Last Name<input type="text" name="Last Name" required><br><br>
+                        Date of Birth<input type="date" name="DOB" required><br><br>
+                        Street Number<input type="text" name="StreetNumber" required><br><br>
+                        Street Name<input type="text" name="StreetName" required><br><br>
+                        Suburb<input type="text" name="Suburb" required><br><br>
+                        Postcode<input type="number" name="Postcode" size="4" required><br><br>
+                        Gender<br>
+                        <input type="radio" name="Gender" value="Other" checked>Other<br>
+                        <input type="radio" name="Gender" value="Female">Female<br>
+                        <input type="radio" name="Gender" value="Male">Male<br><br>
+                        Phone<input type="number" name="Phone" size="10" required><br><br>
+                        Facebook<input type="text" name="Facebook" required><br><br>
+                        Email<input type="email" name="Email" required><br><br>
+                        Contact Preferance<input type="text" name="ContactPreferance" required><br><br>
+                        Password<input type="password" name="Password" required><br><br>
+                        Confirm Password<input type="password" name="ConfirmPassword" required><br><br>
+                        <input type="submit" name="submit" value="Submit" class="submit_button">
+                    </form>
+                    <button class="cancel_button" onclick="overlayOff()">
+                        Cancel
+                    </button>
+                </div>
             </div>
         </div>
 
