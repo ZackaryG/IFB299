@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'accountinformation.apps.AccountinformationConfig',
     'instrumentmanagement.apps.InstrumentmanagementConfig',
     'studentsignup.apps.StudentsignupConfig',
+    'teacherapplication.apps.TeacherapplicationConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
