@@ -11,11 +11,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="instrumentmanagementpage.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/instrumentmanagement/templates/instrumentmanagement/instrumentmanagementpage.html">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PinelandsMusicSchool/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+            <state relative-caret-position="136">
+              <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+              <folding>
+                <element signature="e#644#676#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PinelandsMusicSchool/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/studentsignup/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="8" selection-start-column="8" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studentsignup/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studentsignup/static/studentsignup/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="571">
+              <caret line="274" column="1" selection-start-line="274" selection-start-column="1" selection-end-line="274" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="studentsignuppage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studentsignup/templates/studentsignup/studentsignuppage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="548">
+              <caret line="89" column="7" selection-start-line="89" selection-start-column="7" selection-end-line="89" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -23,17 +74,8 @@
       <file leaf-file-name="Functions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/instrumentmanagement/static/instrumentmanagement/Functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/instrumentmanagement/static/instrumentmanagement/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="220" column="29" selection-start-line="220" selection-start-column="4" selection-end-line="220" selection-end-column="29" />
+            <state>
+              <caret selection-end-line="6" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -43,6 +85,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Script" />
         <option value="HTML File" />
       </list>
     </option>
@@ -64,21 +107,25 @@
         <option value="$PROJECT_DIR$/accountinformation/templates/accountinformation/accountinformationpage.html" />
         <option value="$PROJECT_DIR$/accountinformation/templates/accountinformation/timetable.html" />
         <option value="$PROJECT_DIR$/accountinformation/templates/accountinformation/educationplan.html" />
-        <option value="$PROJECT_DIR$/PinelandsMusicSchool/urls.py" />
         <option value="$PROJECT_DIR$/instrumentmanagement/views.py" />
-        <option value="$PROJECT_DIR$/PinelandsMusicSchool/settings.py" />
         <option value="$PROJECT_DIR$/instrumentmanagement/urls.py" />
-        <option value="$PROJECT_DIR$/instrumentmanagement/static/instrumentmanagement/Functions.js" />
         <option value="$PROJECT_DIR$/instrumentmanagement/static/instrumentmanagement/style.css" />
         <option value="$PROJECT_DIR$/instrumentmanagement/templates/instrumentmanagement/instrumentmanagementpage.html" />
+        <option value="$PROJECT_DIR$/studentsignup/templates/studentsignup/studentsignuppage.html" />
+        <option value="$PROJECT_DIR$/instrumentmanagement/static/instrumentmanagement/Functions.js" />
+        <option value="$PROJECT_DIR$/studentsignup/static/studentsignup/functions.js" />
+        <option value="$PROJECT_DIR$/studentsignup/static/studentsignup/style.css" />
+        <option value="$PROJECT_DIR$/studentsignup/urls.py" />
+        <option value="$PROJECT_DIR$/studentsignup/views.py" />
+        <option value="$PROJECT_DIR$/PinelandsMusicSchool/urls.py" />
+        <option value="$PROJECT_DIR$/PinelandsMusicSchool/settings.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1356" />
-    <option name="y" value="23" />
-    <option name="width" value="1305" />
-    <option name="height" value="1037" />
+    <option name="x" value="-1532" />
+    <option name="width" value="1539" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -96,74 +143,7 @@
             <path>
               <item name="PinelandsMusicSchool" type="b2602c69:ProjectViewProjectNode" />
               <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
-              <item name="accountinformation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PinelandsMusicSchool" type="b2602c69:ProjectViewProjectNode" />
               <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
-              <item name="accountinformation" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PinelandsMusicSchool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
-              <item name="accountinformation" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="accountinformation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PinelandsMusicSchool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
-              <item name="accountinformation" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PinelandsMusicSchool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
-              <item name="accountinformation" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="accountinformation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PinelandsMusicSchool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
-              <item name="instrumentmanagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PinelandsMusicSchool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
-              <item name="instrumentmanagement" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PinelandsMusicSchool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
-              <item name="instrumentmanagement" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="instrumentmanagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PinelandsMusicSchool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
-              <item name="instrumentmanagement" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PinelandsMusicSchool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
-              <item name="instrumentmanagement" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="instrumentmanagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PinelandsMusicSchool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
-              <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PinelandsMusicSchool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PinelandsMusicSchool" type="462c0819:PsiDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -217,12 +197,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1356" y="23" width="1305" height="1037" extended-state="0" />
-    <editor active="true" />
+    <frame x="-1532" y="0" width="1539" height="1047" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2428239" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19172685" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" visible="true" weight="0.33512932" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" visible="true" weight="0.3251599" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -231,22 +210,12 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22678572" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" visible="true" weight="0.32942432" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -261,41 +230,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/accountinformation/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PinelandsMusicSchool/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="80" column="25" selection-start-line="80" selection-start-column="25" selection-end-line="80" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PinelandsMusicSchool/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2074">
-          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/accountinformation/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-          <folding>
-            <element signature="e#644#676#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -517,9 +455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/instrumentmanagement/templates/home/homepage.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/home/templates/home/homepage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="453">
@@ -527,27 +462,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PinelandsMusicSchool/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PinelandsMusicSchool/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/instrumentmanagement/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -555,9 +473,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-          <folding>
-            <element signature="e#644#676#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -565,9 +480,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="6" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -582,9 +494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-          <folding>
-            <element signature="e#644#676#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -602,24 +511,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/instrumentmanagement/static/instrumentmanagement/Functions.js">
+    <entry file="file://$PROJECT_DIR$/instrumentmanagement/templates/instrumentmanagement/instrumentmanagementpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studentsignup/templates/studentsignup/studentsignuppage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="89" column="7" selection-start-line="89" selection-start-column="7" selection-end-line="89" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studentsignup/static/studentsignup/functions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/instrumentmanagement/static/instrumentmanagement/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
+        <state relative-caret-position="265">
           <caret line="220" column="29" selection-start-line="220" selection-start-column="4" selection-end-line="220" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/instrumentmanagement/templates/instrumentmanagement/instrumentmanagementpage.html">
+    <entry file="file://$PROJECT_DIR$/instrumentmanagement/static/instrumentmanagement/Functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+        <state>
+          <caret selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studentsignup/static/studentsignup/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="571">
+          <caret line="274" column="1" selection-start-line="274" selection-start-column="1" selection-end-line="274" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studentsignup/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PinelandsMusicSchool/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="e#644#676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PinelandsMusicSchool/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studentsignup/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
