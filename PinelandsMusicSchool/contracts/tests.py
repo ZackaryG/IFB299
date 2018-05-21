@@ -18,11 +18,13 @@ class ContractTests(TestCase):
         Test creation of contract between student and teacher
         '''
         contract = Contract(teacher=teacher, student=student)
+        contract.save()
         self.assertIsInstance(contract, Contract)
 
     def testContractVerification(self):
         student, teacher = self.createStudentTeacher()
         contract = Contract(teacher=teacher, student=student)
+        contract.save()
 
         # Case: Neither accepted
         # Expected: Acceptance Error Raised
@@ -36,6 +38,7 @@ class ContractTests(TestCase):
         # Expected: Acceptance Error Raised
         contract.teacher_accepted = True
         contract.student_accepted = False
+        contract.save()
 
         with self.assertRaises(AcceptenceError) as context:
             contract.start_contract()
@@ -47,6 +50,7 @@ class ContractTests(TestCase):
         # Expected: Acceptance Error Raised
         contract.teacher_accepted = False
         contract.student_accepted = True
+        contract.save()
 
         with self.assertRaises(AcceptenceError) as context:
             contract.start_contract()
@@ -59,7 +63,17 @@ class ContractTests(TestCase):
         contract.student_accepted = True
 
         contract.start_contract()
+        contract.save()
 
         assert(contract.student_accepted==True)
         assert(contract.teacher_accepted==True)
         assert(contract.status == contract.ACTIVE)
+
+    def testSearch(self):
+        student, teacher = self.createStudentTeacher()
+
+        contract = Contract(teacher=teacher, student=student)
+        contract.save()
+
+        foundContract = Contract.objects.filter(student=student, teacher = teacher)
+        assert(contract == foundContract[0])
