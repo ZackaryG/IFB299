@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'instrumentmanagement/style.css' %}" />
+    <script type ="text/javascript" src="../../static/instrumentmanagement/Functions.js"></script>
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta charset="UTF-8">
+    <title>Pinelands Music School</title>
+</head>
+<body>
+    <div class="content_container">
+        <div class="header">
+
+            <a href=""><img src="../../../static/Pictures/Pinelands_Logo_Placeholder.jpg" alt="School logo" class="logo"></a>
+
+            <div class="pinelands_title">
+                <h class="pinelands">Pinelands<br>Music<br>School</h>
+            </div>
+
+            <div class="account_login">
+                <a href="accountinformation"><img src="../../../static/Pictures/Student_Profile.jpg" alt="Student's profile picture" class="profile_pic"></a>
+                <div class="account_login_text">
+                    <a href=""><p class="login_text">Kermit</p></a>
+                    <a href=""><p class="login_text">Log Out</p></a>
+                </div>
+            </div>
+
+        </div>
+
+        <ul class="nav_bar">
+            <li class="nav_bar_button"><a href="" class="nav_bar_button_text">Button One</a></li>
+
+            <li class="nav_bar_button"><a href="" class="nav_bar_button_text">Button Two</a></li>
+
+            <li class="nav_bar_button"><a href="" class="nav_bar_button_text">Button Three</a></li>
+
+            <li class="nav_bar_button"><a href="" class="nav_bar_button_text">Button Four</a></li>
+
+            <li class="nav_bar_button"><a href="" class="nav_bar_button_text">Button Five</a></li>
+        </ul>
+
+        <div class="account_header">
+            <h class="account_header_title">Instruments</h>
+        </div>
+
+        <table class="instruments_table">
+            <tbody>
+                <tr class="instruments_table_row">
+                    <th>Instrument ID</th>
+                    <th>Instrument</th>
+                    <th>Size</th>
+                    <th>Condition</th>
+                    <th>Available</th>
+                    <th>Rental Price</th>
+                    <th>Sale Price</th>
+                </tr>
+
+                <!-- This will be filled from the DB and contained in a for loop once the DB is in -->
+                <tr class="instruments_table_row">
+                    <td>001</td>
+                    <td>Keyboard</td>
+                    <td>Medium</td>
+                    <td>Good</td>
+                    <td>Yes</td>
+                    <td>$20</td>
+                    <td>$200</td>
+                    <!-- Can add this to allow managers to update the table once permissions are a go -->
+                    <td><a href="">Edit</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button class="add_instrument_button" onclick="overlayOn()">
+            Add New
+        </button><br><br>
+
+        <div id="overlay">
+            <div class="instrument_form_container">
+                Add New Instrument<br><br>
+
+                <form onsubmit="formComplete()">
+                    Instrument<input type="text" name="Instrument" required><br><br>
+                    Size<input type="text" name="Size" required><br><br>
+                    Condition<input type="text" name="Condition" required><br><br>
+                    Available<input type="text" name="Available" required><br><br>
+                    Rental Price<input type="text" name="RentalPrice" required><br><br>
+                    Sale Price<input type="text" name="SalePrice" required><br><br>
+                    <input type="submit" name="submit" value="Submit" class="add_instrument_button">
+                </form><br>
+				<button class="add_instrument_button" onclick="overlayOff()">
+					Cancel
+				</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <br>
+            <a href=""><p class="footer_text">About Us</p></a>
+            <a href=""><p class="footer_text">Contact Us</p></a>
+            <br>
+        </div>
+    </div>
+</body>
+</html>
