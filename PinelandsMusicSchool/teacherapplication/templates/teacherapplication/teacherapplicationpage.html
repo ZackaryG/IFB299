@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'teacherapplication/style.css' %}" />
+    <script type ="text/javascript" src="../../static/teacherapplication/functions.js"></script>
+
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta charset="UTF-8">
+    <title>Pinelands Music School</title>
+</head>
+<body>
+    <div class="content_container">
+        <div class="header">
+
+            <a href="/"><img src="../../../static/Pictures/Pinelands_Logo_Placeholder.jpg" alt="School logo" class="logo"></a>
+
+            <div class="pinelands_title">
+                <h class="pinelands">Pinelands<br>Music<br>School</h>
+            </div>
+
+        </div>
+
+        <ul class="nav_bar">
+            <li class="nav_bar_button"><a href="" class="nav_bar_button_text">Button One</a></li>
+
+            <li class="nav_bar_button"><a href="" class="nav_bar_button_text">Button Two</a></li>
+
+            <li class="nav_bar_button"><a href="" class="nav_bar_button_text">Button Three</a></li>
+
+            <li class="nav_bar_button"><a href="" class="nav_bar_button_text">Button Four</a></li>
+
+            <li class="nav_bar_button"><a href="" class="nav_bar_button_text">Button Five</a></li>
+        </ul>
+
+        <div class="signup_container">
+
+            <br>
+            <button class="signup_button" onclick="overlayOn()">
+				Signup Now
+            </button>
+            <br>
+
+            <br><h class="detail_header">Apply to become a teacher at Pinelands Music School!</h><br>
+            <p class="detail_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum, ante id auctor facilisis, magna lacus vehicula sem, eget vulputate.</p>
+            <br><h class="detail_header">Details and Qualifications</h><br>
+            <p class="detail_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum, ante id auctor facilisis, magna lacus vehicula sem, eget vulputate.</p>
+
+        </div>
+
+        <div id="overlay">
+            <div class="signup_form_container">
+                <div class="signup_form">
+                    <form onsubmit="formComplete()" class="signup_form">
+                        First Name<input type="text" name="FirstName" required><br><br>
+                        Last Name<input type="text" name="Last Name" required><br><br>
+                        Date of Birth<input type="date" name="DOB" required><br><br>
+                        Gender<br>
+                        <input type="radio" name="Gender" value="Male" checked>Male<br>
+                        <input type="radio" name="Gender" value="Female">Female<br>
+                        <input type="radio" name="Gender" value="Other">Other<br><br>
+                        Phone<input type="number" name="Phone" size="10" required><br><br>
+                        Facebook<input type="text" name="Facebook" required><br><br>
+                        Email<input type="email" name="Email" required><br><br>
+                        Contact Preferance<input type="text" name="ContactPreferance" required><br><br>
+						Qualifications<input type="text" name="Qualifications" required><br><br>
+						Instrument Specialty<input type="text" name="InstrumentSpecialty" required><br><br>
+						Languages Known<input type="text" name="LanguagesKnown" required><br><br>
+                        Password<input type="password" name="Password" required><br><br>
+                        Confirm Password<input type="password" name="ConfirmPassword" required><br><br>
+                        <input type="submit" name="submit" value="Submit" class="submit_button">
+                    </form>
+                    <button class="cancel_button" onclick="overlayOff()">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <br>
+            <a href=""><p class="footer_text">About Us</p></a>
+            <a href=""><p class="footer_text">Contact Us</p></a>
+            <br>
+        </div>
+    </div>
+</body>
+</html>
