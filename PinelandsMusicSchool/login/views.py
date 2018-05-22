@@ -1,7 +1,9 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from login.forms import *
+from home.urls import *
 from django.contrib.auth import authenticate, login, logout
+from django.urls import reverse, resolve
 
 # Create your views here.
 def login_page(request):
@@ -16,10 +18,10 @@ def login_user(request):
 
     if user is not None:
         login(request, user)
-        return render(request, 'home/homepage.html')
+        return HttpResponseRedirect(reverse('home'))
 
-    return render(request, 'C:/Users/zacka/Documents/GitHub/IFB299/PinelandsMusicSchool/login/templates/login.html')
+    return render(request, 'login.html')
 
 def logout_user(request):
     logout(request)
-    return render(request, 'home/homepage.html')
+    return HttpResponseRedirect(reverse('home'))
