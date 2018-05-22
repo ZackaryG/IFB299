@@ -20,25 +20,25 @@
                 <h class="pinelands">Pinelands<br>Music<br>School</h>
             </div>
 
-        </div>
-
-        <div class="account_login">
-            <a href=""><img src="../../../static/Pictures/Student_Profile.jpg" alt="Students profile picture" class="profile_pic"></a>
-            <div class="account_login_text">
-                {% if user.is_authenticated %}
-                    {% if user.is_admin %}
-                        <p class="login_text">Admin</p>
-                    {% elif user.is_teacher %}
-                        <p class="login_text">Teacher</p>
+            <div class="account_login">
+                <a href=""><img src="../../../static/Pictures/Student_Profile.jpg" alt="Students profile picture" class="profile_pic"></a>
+                <div class="account_login_text">
+                    {% if user.is_authenticated %}
+                        {% if user.is_admin %}
+                            <p class="login_text">Admin</p>
+                        {% elif user.is_teacher %}
+                            <p class="login_text">Teacher</p>
+                        {% else %}
+                            <p class="login_text">Student</p>
+                        {% endif %}
+                        <a href=""><p class="login_text">{{ request.user.first_name }} {{ request.user.last_name }}</p></a>
+                        <a href="../login/logoutuser"><p class="login_text">Log Out</p></a>
                     {% else %}
-                        <p class="login_text">Student</p>
+                        <a href="/login"><p class="login_text">Log In</p></a>
                     {% endif %}
-                    <a href=""><p class="login_text">{{ request.user.first_name }} {{ request.user.last_name }}</p></a>
-                    <a href="../login/logoutuser"><p class="login_text">Log Out</p></a>
-                {% else %}
-                    <a href="/login"><p class="login_text">Log In</p></a>
-                {% endif %}
+                </div>
             </div>
+
         </div>
 
         <ul class="nav_bar">
