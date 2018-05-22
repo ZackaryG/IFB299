@@ -280,3 +280,59 @@ div.signup_form_container{
 .cancel_button:hover {
     background-color: #FFFFFF;
 }
+
+div.instrument_form_container{
+    position: fixed;
+    width: 60%;
+    min-width: 400;
+    max-width: 614;
+    height: 80%;
+    min-height: 500;
+    max-height: 573;
+    top: 10%;
+    left: 20%;
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-width: black;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.instruments_table{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+.add_instrument_button {
+	border: none;
+    float: center;
+    width: 100px;
+    height: 25px;
+    background-color: #946BD6;
+    font-size: 12pt;
+    left_margin: 10px;
+    top_margin: 10px;
+    color: #2E0571;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.add_instrument_button_text {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 16pt;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #2E0571;
+}
+
+.add_instrument_button:hover {
+    background-color: #FFFFFF;
+}
