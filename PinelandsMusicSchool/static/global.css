@@ -228,9 +228,9 @@ div.signup_container{
 div.signup_form_container{
     overflow: scroll;
     position: fixed;
-    width: 60%;
     min-width: 400;
     max-width: 614;
+    width: 60%;
     height: 80%;
     min-height: 500;
     max-height: 573;
