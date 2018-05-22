@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'instrumentmanagement.apps.InstrumentmanagementConfig',
     'studentsignup.apps.StudentsignupConfig',
     'teacherapplication.apps.TeacherapplicationConfig',
+    'contracts.apps.ContractsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
