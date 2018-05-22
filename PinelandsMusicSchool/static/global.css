@@ -336,3 +336,25 @@ table, th, td {
 .add_instrument_button:hover {
     background-color: #FFFFFF;
 }
+
+div.login_content {
+    height: 200px;
+    width: 100%;
+    max-width: 1024px;
+	margin: auto;
+}
+
+h.login_header {
+    color: #2E0571;
+    font-family: Arial;
+    font-size: 20pt;
+    float: left;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.login_form {
+    float: left;
+    margin-left: 15px;
+    margin-top: 20px;
+}

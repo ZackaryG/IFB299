@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'global.css' %}" />
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta charset="UTF-8">
+    <title>Pinelands Music School</title>
+</head>
+<body>
+    <div class="content_container">
+        <div class="header">
+
+            <a href=""><img src="../../../static/Pictures/Pinelands_Logo_Placeholder.jpg" alt="School logo" class="logo"></a>
+
+            <div class="pinelands_title">
+                <h class="pinelands">Pinelands<br>Music<br>School</h>
+            </div>
+
+            <div class="account_login">
+                <a href="accountinformation"><img src="../../../static/Pictures/Student_Profile.jpg" alt="Student's profile picture" class="profile_pic"></a>
+                <div class="account_login_text">
+                    <a href=""><p class="login_text">Kermit</p></a>
+                    <a href=""><p class="login_text">Log Out</p></a>
+                </div>
+            </div>
+        </div>
+
+        <ul class="nav_bar">
+            <li class="nav_bar_button"><a href="../" class="nav_bar_button_text">Home</a></li>
+
+            <li class="nav_bar_button"><a href="../accountinformation" class="nav_bar_button_text">Account Information</a></li>
+
+            <li class="nav_bar_button"><a href="../studentsignup" class="nav_bar_button_text">Student Signup</a></li>
+
+            <li class="nav_bar_button"><a href="../teacherapplication" class="nav_bar_button_text">Teacher Application</a></li>
+
+            <li class="nav_bar_button"><a href="../instrumentmanagement" class="nav_bar_button_text">Instrument Management</a></li>
+
+            <li class="nav_bar_button"><a href="../contracts" class="nav_bar_button_text">Contract Creation</a></li>
+        </ul>
+
+        <div class="login_content">
+            <form action="loginuser" method="POST" class="login_form">
+                {% csrf_token %}
+                Email <input type="email" name="Email" required><br><br>
+                Password <input type="password" name="Password" required><br><br>
+                <input type="submit" name="submit" value="Log In" class="submit_button">
+            </form>
+        </div>
+
+        <div class="footer">
+            <br>
+            <a href=""><p class="footer_text">About Us</p></a>
+            <a href=""><p class="footer_text">Contact Us</p></a>
+            <br>
+        </div>
+    </div>
+</body>
+</html>
