@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'global.css' %}" />
+    <script type ="text/javascript" src="../../static/contractcreation/functions.js"></script>
+
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta charset="UTF-8">
+    <title>Pinelands Music School</title>
+</head>
+<body>
+    <div class="content_container">
+        <div class="header">
+
+            <a href="/"><img src="../../../static/Pictures/Pinelands_Logo_Placeholder.jpg" alt="School logo" class="logo"></a>
+
+            <div class="pinelands_title">
+                <h class="pinelands">Pinelands<br>Music<br>School</h>
+            </div>
+
+        </div>
+
+        <ul class="nav_bar">
+            <li class="nav_bar_button"><a href="../" class="nav_bar_button_text">Home</a></li>
+
+            <li class="nav_bar_button"><a href="../accountinformation" class="nav_bar_button_text">Account Information</a></li>
+
+            <li class="nav_bar_button"><a href="../studentsignup" class="nav_bar_button_text">Student Signup</a></li>
+
+            <li class="nav_bar_button"><a href="../teacherapplication" class="nav_bar_button_text">Teacher Application</a></li>
+
+            <li class="nav_bar_button"><a href="../instrumentmanagement" class="nav_bar_button_text">Instrument Management</a></li>
+        </ul>
+
+        <div class="contract_container">
+
+             <br><h class="detail_header">Contracts Creation</h><br>
+            <p class="detail_text">Please create contracts between teachers and students to send out to the respective pair, Thank you.</p>
+            <button class="signup_button" onclick="overlayOn()">
+				Contract Creation
+            </button>
+            <br>
+           <br><h class="detail_header">Details and Extra Information</h><br>
+            <p class="detail_text">Managers are to log each contract creation and make sure that it has been submitted.</p>
+	    </div>
+
+        <div id="overlay">
+            <div class="signup_form_container">
+                <div class="contract_form">
+                    <form onsubmit="formComplete()" class="contract_form">
+                        Teacher's First Name <input type="text" name="FirstName" required><br><br>
+                        Teacher's Last Name <input type="text" name="LastName" required><br><br>
+                        Student's First Name <input type="text" name="FirstName" required><br><br>
+                        Student's Last Name <input type="text" name="LastName" required><br><br>
+                        Instrument Choice
+                        <select name="Instrument" required>
+                          <option value="Violin">Violin</option>
+                          <option value="Cello">Cello</option>
+                          <option value="Guitar">Guitar</option>
+                          <option value="Piano">Piano</option>
+                        </select><br><br>
+                        Contract Start Date <input type="date" name="StartDate" required><br><br>
+                        Contract End Date <input type="date" name="EndDate" required><br><br>
+                        Lesson Type <input type="text" name="Type" required><br><br>
+                        Lesson Duration <input type="number" name="Hours" required><br><br>
+                        Lesson Cost <input type="number" name="Cost" required><br><br>
+                        Lesson Quantity <input type="number" name="Quantity" required><br><br>
+                        Total Lesson Cost <input type="number" name="TotalCost" required><br><br>
+                        <input type="submit" name="submit" value="Submit" class="submit_button">
+                    </form>
+                    <button class="cancel_button" onclick="overlayOff()">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <br>
+            <a href=""><p class="footer_text">About Us</p></a>
+            <a href=""><p class="footer_text">Contact Us</p></a>
+            <br>
+        </div>
+    </div>
+</body>
+</html>
