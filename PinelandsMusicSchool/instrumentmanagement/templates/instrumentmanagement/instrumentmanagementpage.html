@@ -74,17 +74,19 @@
                 </tr>
 
                 <!-- This will be filled from the DB and contained in a for loop once the DB is in -->
+                {% for instrument in all_instruments %}
                 <tr class="instruments_table_row">
-                    <td>001</td>
-                    <td>Keyboard</td>
-                    <td>Medium</td>
-                    <td>Good</td>
-                    <td>Yes</td>
-                    <td>$20</td>
-                    <td>$200</td>
+                    <td>{{ instrument.id }}</td>
+                    <td>{{ instrument.type }}</td>
+                    <td>{{ instrument.size }}</td>
+                    <td>{{ instrument.quality }}</td>
+                    <td>{{ instrument.available }}</td>
+                    <td>{{ instrument.rentalPrice }}</td>
+                    <td>{{ instrument.salePrice }}</td>
                     <!-- Can add this to allow managers to update the table once permissions are a go -->
-                    <td><a href="">Edit</a></td>
+                    <td><a href="remove_instrument/{{ instrument.id }}">Remove</a></td>
                 </tr>
+                {% endfor %}
             </tbody>
         </table>
 
@@ -96,7 +98,8 @@
             <div class="instrument_form_container">
                 Add New Instrument<br><br>
 
-                <form onsubmit="formComplete()">
+                <form action="add_instrument" method="POST">
+                    {% csrf_token %}
                     Instrument<input type="text" name="Instrument" required><br><br>
                     Size<input type="text" name="Size" required><br><br>
                     Condition<input type="text" name="Condition" required><br><br>
