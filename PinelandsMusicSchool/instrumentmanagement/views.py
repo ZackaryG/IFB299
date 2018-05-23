@@ -7,23 +7,32 @@ from django.urls import reverse
 # Create your views here.
 @login_required(login_url='../login/')
 def instrumentmanagement(request):
-    all_instruments = Instrument.objects.all()
-    context = {'all_instruments': all_instruments}
-    return render(request, 'instrumentmanagement\instrumentmanagementpage.html', context)
+    if request.user.is_admin or request.user.is_teacher:
+        all_instruments = Instrument.objects.all()
+        context = {'all_instruments': all_instruments}
+        return render(request, 'instrumentmanagement\instrumentmanagementpage.html', context)
+    else:
+        return HttpResponseRedirect(reverse('home'))
 
 def add_instrument(request):
-    type = request.POST.get('Instrument')
-    size = request.POST.get('Size')
-    quality = request.POST.get('Condition')
-    available = request.POST.get('Available')
-    rentalPrice = request.POST.get('RentalPrice')
-    salePrice = request.POST.get('SalePrice')
+    if request.user.is_admin or request.user.is_teacher:
+        type = request.POST.get('Instrument')
+        size = request.POST.get('Size')
+        quality = request.POST.get('Condition')
+        available = request.POST.get('Available')
+        rentalPrice = request.POST.get('RentalPrice')
+        salePrice = request.POST.get('SalePrice')
 
-    i = Instrument(type=type, size=size, quality=quality, available=available, rentalPrice=rentalPrice, salePrice=salePrice)
-    i.save()
-    return HttpResponseRedirect(reverse('instrumentmanagement'))
+        i = Instrument(type=type, size=size, quality=quality, available=available, rentalPrice=rentalPrice, salePrice=salePrice)
+        i.save()
+        return HttpResponseRedirect(reverse('instrumentmanagement'))
+    else:
+        return HttpResponseRedirect(reverse('home'))
 
 def remove_instrument(request, id):
-    i = Instrument.objects.get(pk = id)
-    i.delete()
-    return HttpResponseRedirect(reverse('instrumentmanagement'))
+    if request.user.is_admin or request.user.is_teacher:
+        i = Instrument.objects.get(pk = id)
+        i.delete()
+        return HttpResponseRedirect(reverse('instrumentmanagement'))
+    else:
+        return HttpResponseRedirect(reverse('home'))
