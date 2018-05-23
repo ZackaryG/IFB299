@@ -51,6 +51,10 @@
 
         </div>
 
+        {% if error_message %}
+            <p><strong>{{ error_message }}</strong></p>
+        {% endif %}
+
         <div id="overlay">
             <div class="signup_form_container">
                 <div class="signup_form">
