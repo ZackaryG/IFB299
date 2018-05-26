@@ -14,10 +14,13 @@ def add(request):
     dob = request.POST.get('DOB')
     password = request.POST.get('Password')
 
-    form = UserAdminCreationForm(request.POST)
+    form = RegisterForm(request.POST)
+    form.clean_email()
 
-    if(form.is_valid() == False):
-        return render(request, 'studentsignup/studentsignuppage.html', {'error_message': "This informtaion is invalid"})
-    else:
-        Member.objects.create_student(email, first_name, last_name, dob, password)
-        return render(request, 'studentsignup/studentsignuppage.html')
+    form = UserAdminCreationForm(request.POST)
+    form.clean_first_name()
+    form.clean_last_name()
+    form.clean_dob()
+
+    Member.objects.create_student(email, first_name, last_name, dob, password)
+    return render(request, 'studentsignup/studentsignuppage.html')

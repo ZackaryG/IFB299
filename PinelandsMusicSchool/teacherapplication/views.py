@@ -14,5 +14,13 @@ def add(request):
     dob = request.POST.get('DOB')
     password = request.POST.get('Password')
 
+    form = RegisterForm(request.POST)
+    form.clean_email()
+
+    form = UserAdminCreationForm(request.POST)
+    form.clean_first_name()
+    form.clean_last_name()
+    form.clean_dob()
+
     Member.objects.create_teacher(email, first_name, last_name, dob, password)
     return render(request, 'teacherapplication/teacherapplicationpage.html')
