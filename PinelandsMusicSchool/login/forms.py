@@ -5,8 +5,8 @@ from .models import Member
 
 
 class RegisterForm(forms.ModelForm):
-    password = forms.CharField(widget=forms.PasswordInput)
-    password2 = forms.CharField(label='Confirm password', widget=forms.PasswordInput)
+    password = forms.CharField()
+    password2 = forms.CharField(label='Confirm password')
 
     class Meta:
         model = Member
@@ -36,10 +36,10 @@ class RegisterForm(forms.ModelForm):
 class UserAdminCreationForm(forms.ModelForm):
     """A form for creating new users. Includes all the required
     fields, plus a repeated password."""
-    first_name = forms.CharField(label ='First Name', widget=forms.CharField)
-    last_name = forms.CharField(label='Last Name', widget = forms.CharField)
-    password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
-    password2 = forms.CharField(label='Password confirmation', widget=forms.PasswordInput)
+    first_name = forms.CharField(label ='First Name')
+    last_name = forms.CharField(label='Last Name')
+    password1 = forms.CharField(label='Password')
+    password2 = forms.CharField(label='Password confirmation')
 
     class Meta:
         model = Member
