@@ -22,8 +22,19 @@
             <div class="account_login">
                 <a href="accountinformation"><img src="../../../static/Pictures/Student_Profile.jpg" alt="Student's profile picture" class="profile_pic"></a>
                 <div class="account_login_text">
-                    <a href=""><p class="login_text">Kermit</p></a>
-                    <a href=""><p class="login_text">Log Out</p></a>
+                    {% if user.is_authenticated %}
+                        {% if user.is_admin %}
+                            <p class="login_text">Admin</p>
+                        {% elif user.is_teacher %}
+                            <p class="login_text">Teacher</p>
+                        {% else %}
+                            <p class="login_text">Student</p>
+                        {% endif %}
+                        <a href=""><p class="login_text">{{ request.user.first_name }} {{ request.user.last_name }}</p></a>
+                        <a href="../login/logoutuser"><p class="login_text">Log Out</p></a>
+                    {% else %}
+                        <a href="/login"><p class="login_text">Log In</p></a>
+                    {% endif %}
                 </div>
             </div>
 
@@ -37,8 +48,13 @@
             <li class="nav_bar_button"><a href="../studentsignup" class="nav_bar_button_text">Student Signup</a></li>
 
             <li class="nav_bar_button"><a href="../teacherapplication" class="nav_bar_button_text">Teacher Application</a></li>
+            {% if user.is_authenticated %}
+                {% if user.is_admin or user.is_teacher %}
+                <li class="nav_bar_button"><a href="../instrumentmanagement" class="nav_bar_button_text">Instrument Management</a></li>
 
-            <li class="nav_bar_button"><a href="../instrumentmanagement" class="nav_bar_button_text">Instrument Management</a></li>
+                <li class="nav_bar_button"><a href="../contracts" class="nav_bar_button_text">Contract Creation</a></li>
+                {% endif %}
+            {% endif %}
         </ul>
 
         <div class="account_header">
@@ -58,17 +74,19 @@
                 </tr>
 
                 <!-- This will be filled from the DB and contained in a for loop once the DB is in -->
+                {% for instrument in all_instruments %}
                 <tr class="instruments_table_row">
-                    <td>001</td>
-                    <td>Keyboard</td>
-                    <td>Medium</td>
-                    <td>Good</td>
-                    <td>Yes</td>
-                    <td>$20</td>
-                    <td>$200</td>
+                    <td>{{ instrument.id }}</td>
+                    <td>{{ instrument.type }}</td>
+                    <td>{{ instrument.size }}</td>
+                    <td>{{ instrument.quality }}</td>
+                    <td>{{ instrument.available }}</td>
+                    <td>{{ instrument.rentalPrice }}</td>
+                    <td>{{ instrument.salePrice }}</td>
                     <!-- Can add this to allow managers to update the table once permissions are a go -->
-                    <td><a href="">Edit</a></td>
+                    <td><a href="remove_instrument/{{ instrument.id }}">Remove</a></td>
                 </tr>
+                {% endfor %}
             </tbody>
         </table>
 
@@ -80,7 +98,8 @@
             <div class="instrument_form_container">
                 Add New Instrument<br><br>
 
-                <form onsubmit="formComplete()">
+                <form action="add_instrument" method="POST">
+                    {% csrf_token %}
                     Instrument<input type="text" name="Instrument" required><br><br>
                     Size<input type="text" name="Size" required><br><br>
                     Condition<input type="text" name="Condition" required><br><br>

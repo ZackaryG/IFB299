@@ -17,26 +17,6 @@
             <div class="pinelands_title">
                 <h class="pinelands">Pinelands<br>Music<br>School</h>
             </div>
-
-            <div class="account_login">
-                <a href="/"><img src="../../../static/Pictures/Student_Profile.jpg" alt="Students profile picture" class="profile_pic"></a>
-                <div class="account_login_text">
-                    {% if user.is_authenticated %}
-                        {% if user.is_admin %}
-                            <p class="login_text">Admin</p>
-                        {% elif user.is_teacher %}
-                            <p class="login_text">Teacher</p>
-                        {% else %}
-                            <p class="login_text">Student</p>
-                        {% endif %}
-                        <a href=""><p class="login_text">{{ request.user.first_name }} {{ request.user.last_name }}</p></a>
-                        <a href="../login/logoutuser"><p class="login_text">Log Out</p></a>
-                    {% else %}
-                        <a href="/login"><p class="login_text">Log In</p></a>
-                    {% endif %}
-                </div>
-            </div>
-
         </div>
 
         <ul class="nav_bar">
@@ -56,20 +36,13 @@
             {% endif %}
         </ul>
 
-        <div class="account_header">
-            <h class="account_header_title">Kermit's Education Plan</h>
-        </div>
-
-        <ul class="nav_bar">
-            <li class="nav_bar_button"><a href="/accountinformation" class="nav_bar_button_text">Personal Details</a></li>
-
-            <li class="nav_bar_button"><a href="/accountinformation/timetable" class="nav_bar_button_text">Time Table</a></li>
-
-            <li class="nav_bar_button"><a href="/accountinformation/educationplan" class="nav_bar_button_text">Education Plan</a></li>
-        </ul>
-
-        <div class="detail_container">
-            <br><h class="detail_header">Insert Education Plan Here</h><br>
+        <div class="login_content">
+            <form action="loginuser" method="POST" class="login_form">
+                {% csrf_token %}
+                Email <input type="email" name="Email" required><br><br>
+                Password <input type="password" name="Password" required><br><br>
+                <input type="submit" name="submit" value="Log In" class="submit_button">
+            </form>
         </div>
 
         <div class="footer">
