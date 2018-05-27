@@ -40,7 +40,7 @@ class UserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-    def create_student(self, email, first_name, last_name, dob, password):
+    def create_student(self, email, first_name, last_name, dob, password, confirm_password):
         """
         Creates and saves a student account
         :param email:
@@ -48,6 +48,7 @@ class UserManager(BaseUserManager):
         :param last_name:
         :param dob:
         :param password:
+        :param confirm_password:
         :return:
         """
         user = self.create_user(
@@ -55,6 +56,7 @@ class UserManager(BaseUserManager):
             first_name,
             last_name,
             dob,
+            confirm_password,
             password=password,
         )
 

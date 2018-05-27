@@ -22,5 +22,9 @@ def add(request):
         if form.is_valid():
             Member.objects.create_student(email, first_name, last_name, dob, password, confirm_password)
             return render(request, 'login/login.html')
+        else:
+            return HttpResponse("<h1>Second</h1>")
+    else:
+        return HttpResponse("<h1>First</h1>")
 
     return HttpResponseRedirect(reverse('studentsignup'))
