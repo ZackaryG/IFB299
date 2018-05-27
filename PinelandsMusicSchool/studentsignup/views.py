@@ -1,5 +1,6 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
+from django.urls import reverse
 from login.forms import *
 
 # Create your views here.
@@ -13,12 +14,13 @@ def add(request):
     last_name = request.POST.get('LastName')
     dob = request.POST.get('DOB')
     password = request.POST.get('Password')
+    confirm_password = request.POST.get('ConfirmPassword')
 
     form = RegisterForm(request.POST)
-    form.is_valid()
+    if form.is_valid():
+        form = UserAdminCreationForm(request.POST)
+        if form.is_valid():
+            Member.objects.create_student(email, first_name, last_name, dob, password, confirm_password)
+            return render(request, 'login/login.html')
 
-    form = UserAdminCreationForm(request.POST)
-    form.is_valid()
-
-    Member.objects.create_student(email, first_name, last_name, dob, password)
-    return render(request, 'studentsignup/studentsignuppage.html')
+    return HttpResponseRedirect(reverse('studentsignup'))
