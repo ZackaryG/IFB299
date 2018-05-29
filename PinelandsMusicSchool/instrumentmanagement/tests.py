@@ -19,26 +19,33 @@ class InstrumentTests(TestCase):
     def test_create_instrument(self):
         '''
         Test if instrument is successfully created, and is avaliable
-        :return:
         '''
         guitar = createInstrument()
         self.assertIsInstance(guitar, Instrument)
         assert(guitar.is_avaliable() == True)
 
     def test_assign_to_existing_student(self):
-        # Case: Student exists
+        '''
+        Tests assigning & unassigning instrument to student
+        '''
         student = createStudent() # Create student
         guitar = createInstrument() # Create instrument
 
         guitar.set_assigned_student(student.get_username())
 
         assert(guitar.assigned_student == student.get_username())
+        assert(guitar.is_avaliable() == False)
+
+        # Reset owner to none
+        guitar.reset_owner()
+        assert(guitar.assigned_student == Instrument.NO_OWNER) # Instrument now has no owner
+        assert(guitar.is_avaliable() == True) # Instrument now avaliable
 
     def test_assign_to_nonexisting_student(self):
-        # Case: Student does not exist
+        '''
+        Tests assigning instrument to student, when input username does not exist
+        :return:
+        '''
         guitar = createInstrument()
 
-        with self.assertRaises(Exception) as context:
-            guitar.set_assigned_student('holy@moses.com')
-
-        self.assertTrue('Student does not exist' in context.exception)
+        self.assertRaises(ValueError, lambda: guitar.set_assigned_student('holy@moses.com')) # ValueError Raised
