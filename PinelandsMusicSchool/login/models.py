@@ -184,3 +184,85 @@ class Member(AbstractBaseUser):
     @property
     def is_teacher(self):
         return self.teacher
+
+class Timetable(models.Model):
+    '''
+    Model representing timetable of member
+    '''
+    member = models.ForeignKey(Member, related_name='Member', on_delete=models.DO_NOTHING, default = None, null = False)
+
+    MON = 0
+    TUE = 1
+    WED = 2
+    THU = 3
+    FRI = 4
+    SAT = 5
+    SUN = 6
+    DAYS_CHOICES = ((MON, 'Monday'),
+                    (TUE, 'Tuesday'),
+                    (WED, 'Wednesday'),
+                    (THU, 'Thursday'),
+                    (FRI, 'Friday'),
+                    (SAT, 'Saturday'),
+                    (SUN, 'Sunday'))
+
+    # Boolean fields indicating availability of member on certain days
+    mon = models.BooleanField(default = False)
+    tue = models.BooleanField(default=False)
+    wed = models.BooleanField(default=False)
+    thu = models.BooleanField(default=False)
+    fri = models.BooleanField(default=False)
+    sat = models.BooleanField(default=False)
+    sun = models.BooleanField(default=False)
+
+    def setTimetable(self, timetable):
+        '''
+        Sets availability of member based on supplied timetable
+        :param timetable: list of integers indicating day of the week (0 = mon, 1 = tues, 2 = wed, etc)
+        '''
+        for day in range(6):
+            if day in timetable:
+                self.setAvailable(day)
+            else:
+                self.setUnavailable(day)
+
+
+    def setAvailable(self, index):
+        '''
+        Sets specified day to TRUE (available)
+        :param index: Integer indicating day of the week (0 = mon, 1 = tues, 2 = wed, etc)
+        '''
+        if index == self.MON:
+            self.mon = True
+        elif index == self.TUE:
+            self.tue = True
+        elif index == self.WED:
+            self.wed = True
+        elif index == self.THU:
+            self.thu = True
+        elif index == self.FRI:
+            self.fri = True
+        elif index == self.SAT:
+            self.sat = True
+        elif index == self.SUN:
+            self.sun = True
+
+    def setUnavailable(self, index):
+        '''
+        Sets specified day to FALSE (unavailable)
+        :param index: Integer indicating day of the week (0 = mon, 1 = tues, 2 = wed, etc)
+        '''
+        if index == self.MON:
+            self.mon = False
+        elif index == self.TUE:
+            self.tue = False
+        elif index == self.WED:
+            self.wed = False
+        elif index == self.THU:
+            self.thu = False
+        elif index == self.FRI:
+            self.fri = False
+        elif index == self.SAT:
+            self.sat = False
+        elif index == self.SUN:
+            self.sun = False
