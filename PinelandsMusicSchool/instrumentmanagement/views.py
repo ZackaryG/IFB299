@@ -33,6 +33,32 @@ def add_instrument(request):
     else:
         return HttpResponseRedirect(reverse('home'))
 
+def edit_instrument(request, id):
+    if request.user.is_admin or request.user.is_teacher:
+        i = Instrument.objects.get(pk = id)
+
+        type = request.POST.get('Instrument')
+        size = request.POST.get('Size')
+        quality = request.POST.get('Condition')
+        available = request.POST.get('Available')
+        rentalPrice = request.POST.get('RentalPrice')
+        salePrice = request.POST.get('SalePrice')
+        assignedStudent = request.POST.get('AssignedStudent')
+        isSold = request.POST.get('IsSold')
+
+        i.save()
+
+        return HttpResponseRedirect(reverse('instrumentmanagement'))
+    else:
+        return HttpResponseRedirect(reverse('home'))
+
+def edit_form(request, id):
+    if request.user.is_admin or request.user.is_teacher:
+        context = {'instrument': Instrument.objects.get(pk = id)}
+        return render(request, 'instrumentmanagement\edit_form.html', context)
+    else:
+        return HttpResponseRedirect(reverse('home'))
+
 def remove_instrument(request, id):
     if request.user.is_admin or request.user.is_teacher:
         i = Instrument.objects.get(pk = id)

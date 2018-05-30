@@ -20,5 +20,7 @@ from . import views
 urlpatterns = [
     path('', views.instrumentmanagement, name='instrumentmanagement'),
     path('add_instrument', views.add_instrument, name='add_instrument'),
+    re_path(r'^edit_form/([0-9]+)$', views.edit_form, name='edit_form'),
     re_path(r'^remove_instrument/([0-9]+)$', views.remove_instrument, name='remove_instrument'),
+    re_path(r'^edit_form/edit_instrument/([0-9]+)$', views.edit_instrument, name='edit_instrument'),
 ]

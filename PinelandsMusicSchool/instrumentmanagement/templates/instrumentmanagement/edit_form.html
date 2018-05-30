@@ -67,10 +67,9 @@
                     <th>Instrument</th>
                     <th>Size</th>
                     <th>Condition</th>
+                    <th>Available</th>
                     <th>Rental Price</th>
                     <th>Sale Price</th>
-                    <th>Assigned Student</th>
-                    <th>Is Sold</th>
                 </tr>
 
                 <!-- This will be filled from the DB and contained in a for loop once the DB is in -->
@@ -80,12 +79,11 @@
                     <td>{{ instrument.type }}</td>
                     <td>{{ instrument.size }}</td>
                     <td>{{ instrument.quality }}</td>
-                    <td>{{ instrument.rental_price }}</td>
-                    <td>{{ instrument.sale_price }}</td>
-                    <td>{{ instrument.assigned_student }}</td>
-                    <td>{{ instrument.is_sold }}</td>
+                    <td>{{ instrument.available }}</td>
+                    <td>{{ instrument.rentalPrice }}</td>
+                    <td>{{ instrument.salePrice }}</td>
                     <!-- Can add this to allow managers to update the table once permissions are a go -->
-                    <td><a href="remove_instrument/{{ instrument.id }}">Remove</a></td>
+                    <td><a href="edit_form/{{ instrument.id }}">Edit</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -95,12 +93,13 @@
             Add New
         </button><br><br>
 
-        <div id="overlay">
+        <div id="overlay2">
             <div class="instrument_form_container">
-                Add New Instrument<br><br>
+                Edit Instrument<br><br>
 
-                <form action="add_instrument" method="POST">
+                <form action="edit_instrument/{{ instrument.id }}" method="POST">
                     {% csrf_token %}
+                    <a href="remove_instrument/{{ instrument.id }}">Remove</a><br><br>
                     Instrument<input type="text" name="Instrument" required><br><br>
                     Size<input type="text" name="Size" required><br><br>
                     Condition
@@ -119,9 +118,9 @@
                     </select><br><br>
                     <input type="submit" name="submit" value="Submit" class="add_instrument_button">
                 </form><br>
-				<button class="add_instrument_button" onclick="overlayOff()">
+				<a href="../"><button class="add_instrument_button">
 					Cancel
-				</button>
+				</button></a>
             </div>
         </div>
 
