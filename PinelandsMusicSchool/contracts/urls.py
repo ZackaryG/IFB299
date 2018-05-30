@@ -19,4 +19,5 @@ from . import views
 
 urlpatterns = [
     path('', views.contracts, name='contracts'),
+    path('create_contract', views.create_contract, name='create_contract'),
 ]
