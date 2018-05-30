@@ -7,7 +7,7 @@ def teacherapplication(request):
     return render(request, 'teacherapplication/teacherapplicationpage.html')
 
 
-def add(request):
+def add_teacher(request):
     email = request.POST.get('Email')
     first_name = request.POST.get('FirstName')
     last_name = request.POST.get('LastName')

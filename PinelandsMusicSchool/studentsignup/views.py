@@ -7,7 +7,7 @@ def studentsignup(request):
     return render(request, 'studentsignup/studentsignuppage.html')
 
 
-def add(request):
+def add_student(request):
     email = request.POST.get('Email')
     first_name = request.POST.get('FirstName')
     last_name = request.POST.get('LastName')

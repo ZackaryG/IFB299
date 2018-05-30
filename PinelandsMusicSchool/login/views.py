@@ -7,7 +7,7 @@ from django.urls import reverse, resolve
 
 # Create your views here.
 def login_page(request):
-    return render(request, 'C:/Users/zacka/Documents/GitHub/IFB299/PinelandsMusicSchool/login/templates/login.html')
+    return render(request, 'login.html')
 
 
 def login_user(request):
