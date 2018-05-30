@@ -3,6 +3,7 @@
     max-width: 1024px;
     min-width: 512px;
     margin: auto;
+    font-family: Georgia;
 }
 
 .logo {
@@ -10,7 +11,7 @@
     height: 120px;
     float: left;
     margin-top: 15px;
-    margin-left: 15px;
+    margin-left: 40px;
     margin-right: 15px;
 }
 
@@ -29,9 +30,8 @@ div.account_login_text {
 }
 
 p.login_text {
-    margin: auto;
-    margin-left: 10px;
-    color: #2E0571;
+    margin-right:30px;
+    color: #592c00;
 }
 
 .profile_pic {
@@ -42,45 +42,66 @@ p.login_text {
 }
 
 .welcome_pic {
-    width: 100%;
+    width: 95%;
     height: auto;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #f3ba76;
+    border: 25.5px double #8e5499;
 }
 
 div.header {
     height: 150px;
     width: 100%;
     max-width: 1024px;
-    background-color: #7C45D6;
+    background-color: #8e5499;
 	margin: auto;
 }
 
 h.pinelands {
-    color: #2E0571;
-    font-family: Arial;
-    font-size: 30pt;
-    margin-left 100px;
+    width:100%;
+    color: #592c00;
+    font-family: "Felix Titling";
+    font-size: 40px;
+    float:left;
+    border: 2px solid #f3ba76;
+    padding:5px;
+    text-align: center;
+    margin-top:40px;
+    margin-bottom:5px;
+    margin-left:15%;
 }
 
+h3.pinelandsquote {
+    width:100%;
+    color: #FFFFFF;
+    font-family: "Helvetica";
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-left:16%;
+}
 div.footer {
-	background-color: #7C45D6;
+	background-color: #8e5499;
 	margin: auto;
 	width: 100%;
 	max-width: 1024px;
-	float: bottom;
+	float: left;
 }
 
 p.footer_text {
-    font-family: Arial;
+    font-family: "Felix Titling";
 	margin-top: 10px;
 	margin-bottom: 10px;
 	margin-left: 15px;
-    color: #2E0571;
+    color: #f3ba76;
 }
 
 h.section_header {
-    font-family: Arial;
-    color: #2E0571;
-    font-size: 16pt;
+    font-family: "Felix Titling";
+    color: #592c00;
+    font-size: 16px;
 }
 
 /* https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black */
@@ -89,7 +110,7 @@ h.section_header {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #946BD6;
+    background-color: #be7979;
 }
 
 .nav_bar_button {
@@ -99,24 +120,25 @@ h.section_header {
 .nav_bar_button_text {
     display: block;
     color: white;
-    font-family: Arial;
+    font-family: "Felix Titling";
+    font-size: 80%;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    color: #2E0571;
+    color: #592c00;
 }
 
 .nav_bar_button_text:hover {
-    font-family: Arial;
-    background-color: #FFFFFF;
+    font-family: "Felix Titling";
+    background-color: #f3ba76;
 }
 
 /* https://www.w3schools.com/howto/howto_css_three_columns.asp */
 .column {
-    width: 33.33%;
+    background-color: #be7979;
+    width: 30%;
 	float: left;
-	margin-top: 10px;
-	margin-bottom: 10px;
+    padding:1.66%;
 }
 @media screen and (max-width: 600px) {
     .column {
@@ -134,14 +156,14 @@ div.account_header {
     height: 75px;
     width: 100%;
     max-width: 1024px;
-    background-color: #7C45D6;
+    background-color: #8e5499;
 	margin: auto;
 }
 
 h.account_header_title {
-    color: #2E0571;
-    font-family: Arial;
-    font-size: 20pt;
+    color: #592c00;
+    font-family: "Felix Titling";
+    font-size: 20px;
     float: left;
     margin-left: 15px;
     margin-top: 20px;
@@ -155,14 +177,14 @@ div.detail_container{
 }
 
 h.detail_header {
-    color: #2E0571;
-    font-size: 12pt;
+    color: #592c00;
+    font-size: 15px;
     margin-left: 15px;
     margin-top: 10px;
 }
 
 .detail_text {
-    font-size: 12pt;
+    font-size: 12px;
     margin-left: 15px;
 }
 
@@ -174,26 +196,24 @@ h.detail_header {
 /* Student signup page formatting */
 .signup_button {
 	border:none;
-    float: center;
+    float: left;
     width: 150px;
     height: 50px;
-    background-color: #946BD6;
-    font-size: 16pt;
-    left_margin: 10px;
-    top_margin: 10px;
-    color: #2E0571;
+    background-color: #be7979;
+    font-size: 16px;
+    margin-left: 10px;
+    color: #592c00;
     text-decoration: none;
     cursor: pointer;
 }
 
 .signup_button_text {
     display: block;
-    color: white;
     text-align: center;
-    font-size: 16pt;
+    font-size: 16px;
     padding: 14px 16px;
     text-decoration: none;
-    color: #2E0571;
+    color: #592c00;
 }
 
 .signup_button:hover {
@@ -204,8 +224,9 @@ div.signup_container{
     float: left;
     left_margin: 10px;
     top_margin: 10px;
-    background-color: white;
-    width: 100%;
+    background-color: #f3ba76;
+    border: 5px double #8e5499;
+    width: 99%;
     max-width: 1024px;
     min-height: 200px;
 }
@@ -226,25 +247,26 @@ div.signup_container{
 }
 
 div.signup_form_container{
-    overflow: scroll;
+    overflow: hidden;
     position: fixed;
+    float:left;
     width: 60%;
     min-width: 400;
     max-width: 614;
     height: 80%;
     min-height: 500;
     max-height: 573;
+    padding:10px;
     top: 10%;
     left: 20%;
-    background-color: white;
+    background-color: #f3ba76;
     border-style: solid;
     border-width: 2px;
     border-width: black;
 }
 
 .signup_form{
-    left_margin: 10px;
-    top_margin: 10px;
+    margin: 40px;
 }
 
 .submit_button{
@@ -252,11 +274,11 @@ div.signup_form_container{
     float: left;
     width: 150px;
     height: 50px;
-    background-color: #946BD6;
-    font-size: 16pt;
-    left_margin: 10px;
-    top_margin: 10px;
-    color: #2E0571;
+    background-color: #be7979;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: #592c00;
     text-decoration: none;
     cursor: pointer;
 }
@@ -269,11 +291,11 @@ div.signup_form_container{
     float: right;
     width: 150px;
     height: 50px;
-    background-color: #946BD6;
-    font-size: 16pt;
-    left_margin: 10px;
-    top_margin: 10px;
-    color: #2E0571;
+    background-color: #be7979;
+    font-size: 16px;
+    margin-right: 40px;
+    margin-top: -20px;
+    color: #592c00;
     text-decoration: none;
     cursor: pointer;
 }
@@ -314,11 +336,11 @@ table, th, td {
     float: center;
     width: 100px;
     height: 25px;
-    background-color: #946BD6;
-    font-size: 12pt;
+    background-color: #be7979;
+    font-size: 12px;
     left_margin: 10px;
     top_margin: 10px;
-    color: #2E0571;
+    color: #592c00;
     text-decoration: none;
     cursor: pointer;
 }
@@ -327,10 +349,10 @@ table, th, td {
     display: block;
     color: white;
     text-align: center;
-    font-size: 16pt;
+    font-size: 16px;
     padding: 14px 16px;
     text-decoration: none;
-    color: #2E0571;
+    color: #592c00;
 }
 
 .add_instrument_button:hover {
@@ -339,15 +361,17 @@ table, th, td {
 
 div.login_content {
     height: 200px;
-    width: 100%;
+    width: 99%;
+    background-color: #f3ba76;
     max-width: 1024px;
 	margin: auto;
+    border: 5px double #8e5499;
 }
 
 h.login_header {
-    color: #2E0571;
-    font-family: Arial;
-    font-size: 20pt;
+    color: #592c00;
+    font-family: "Felix Titling";
+    font-size: 20px;
     float: left;
     margin-left: 15px;
     margin-top: 20px;
