@@ -12,14 +12,15 @@
     <div class="content_container">
         <div class="header">
 
-            <a href=""><img src="../../../static/Pictures/Pinelands_Logo_Placeholder.jpg" alt="School logo" class="logo"></a>
+            <a href="/"><img src="../../../static/Pictures/Pinelands_Logo.png" alt="School logo" class="logo"></a>
 
             <div class="pinelands_title">
-                <h class="pinelands">Pinelands<br>Music<br>School</h>
+                <h class="pinelands">Pinelands Music School</h>
+                <h3 class="pinelandsquote">the academy that makes your musical dreams come true</h3>
             </div>
 
             <div class="account_login">
-                <div class="account_login_text">
+                 <div class="account_login_text">
                     {% if user.is_authenticated %}
                         {% if user.is_admin %}
                             <p class="login_text">Admin</p>
@@ -29,7 +30,7 @@
                             <p class="login_text">Student</p>
                         {% endif %}
                         <a href=""><p class="login_text">{{ request.user.first_name }} {{ request.user.last_name }}</p></a>
-                        <a href="../login/logoutuser"><p class="login_text">Log Out</p></a>
+                        <a href="../login/logoutuser"><p class="login_text" >Log Out</p></a>
                     {% else %}
                         <a href="/login"><p class="login_text">Log In</p></a>
                     {% endif %}
@@ -56,23 +57,36 @@
         </ul>
 
         <div class="account_header">
-            <h class="account_header_title">Kermit's Education Plan</h>
+            <h class="account_header_title">{{ request.user.first_name }}'s Personal Details</h>
         </div>
 
         <ul class="nav_bar">
             <li class="nav_bar_button"><a href="/accountinformation" class="nav_bar_button_text">Personal Details</a></li>
 
             <li class="nav_bar_button"><a href="/accountinformation/timetable" class="nav_bar_button_text">Time Table</a></li>
-
-            <li class="nav_bar_button"><a href="/accountinformation/educationplan" class="nav_bar_button_text">Education Plan</a></li>
+            {% if user.is_admin or user.is_teacher %}
+                <li class="nav_bar_button"><a href="/accountinformation/educationplan" class="nav_bar_button_text">Employment Details</a></li>
+            {% else %}
+                <li class="nav_bar_button"><a href="/accountinformation/educationplan" class="nav_bar_button_text">Education Plan</a></li>
+            {% endif %}
         </ul>
 
         <div class="detail_container">
-            <br><h class="detail_header">Insert Education Plan Here</h><br>
+            <!--<br><h class="detail_header">Profile Picture</h><br>
+
+            <p class="detail_text">Change Profile Picture</p>
+            <img src="../../../static/Pictures/divider.jpg" alt="Line dividing sections" class="divider">-->
+            <br><h class="detail_header">About You</h><br>
+
+            <p class="detail_text">Name: {{ request.user.first_name }} {{ request.user.last_name }}</p>
+            <p class="detail_text">Email: {{ request.user.email }}</p>
+            <p class="detail_text">DOB: {{ request.user.dob }}</p>
         </div>
 
         <div class="footer">
             <br>
+            <a href=""><p class="footer_text">About Us</p></a>
+            <a href=""><p class="footer_text">Contact Us</p></a>
             <br>
         </div>
     </div>
