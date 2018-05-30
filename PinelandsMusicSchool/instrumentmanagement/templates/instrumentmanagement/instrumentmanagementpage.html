@@ -13,14 +13,15 @@
     <div class="content_container">
         <div class="header">
 
-            <a href=""><img src="../../../static/Pictures/Pinelands_Logo_Placeholder.jpg" alt="School logo" class="logo"></a>
+            <a href=""><img src="../../../static/Pictures/Pinelands_Logo.png" alt="School logo" class="logo"></a>
 
             <div class="pinelands_title">
-                <h class="pinelands">Pinelands<br>Music<br>School</h>
+                <h class="pinelands">Pinelands Music School</h>
+                <h3 class="pinelandsquote">the academy that makes your musical dreams come true</h3>
             </div>
 
             <div class="account_login">
-                <div class="account_login_text">
+                 <div class="account_login_text">
                     {% if user.is_authenticated %}
                         {% if user.is_admin %}
                             <p class="login_text">Admin</p>
@@ -30,7 +31,7 @@
                             <p class="login_text">Student</p>
                         {% endif %}
                         <a href=""><p class="login_text">{{ request.user.first_name }} {{ request.user.last_name }}</p></a>
-                        <a href="../login/logoutuser"><p class="login_text">Log Out</p></a>
+                        <a href="../login/logoutuser"><p class="login_text" >Log Out</p></a>
                     {% else %}
                         <a href="/login"><p class="login_text">Log In</p></a>
                     {% endif %}
@@ -59,7 +60,7 @@
         <div class="account_header">
             <h class="account_header_title">Instruments</h>
         </div>
-
+<div class="signup_container">
         <table class="instruments_table">
             <tbody>
                 <tr class="instruments_table_row">
@@ -91,27 +92,28 @@
             </tbody>
         </table>
 
+
         <button class="add_instrument_button" onclick="overlayOn()">
             Add New
         </button><br><br>
-
+</div>
         <div id="overlay">
             <div class="instrument_form_container">
                 Add New Instrument<br><br>
 
                 <form action="add_instrument" method="POST">
                     {% csrf_token %}
-                    Instrument<input type="text" name="Instrument" required><br><br>
-                    Size<input type="text" name="Size" required><br><br>
+                    Instrument <input type="text" name="Instrument" required><br><br>
+                    Size <input type="text" name="Size" required><br><br>
                     Condition
                     <select id="Condition" name="Condition">
 						<option value="n">New</option>
 						<option value="u">Used</option>
 						<option value="p">Unspecified</option>
                     </select><br><br>
-                    Rental Price<input type="number" name="RentalPrice" required><br><br>
-                    Sale Price<input type="number" name="SalePrice" required><br><br>
-                    Assigned Student<input type="text" name="AssignedStudent" required><br><br>
+                    Rental Price <input type="number" name="RentalPrice" required><br><br>
+                    Sale Price <input type="number" name="SalePrice" required><br><br>
+                    Assigned Student <input type="text" name="AssignedStudent" required><br><br>
                     Is Sold
                     <select id="IsSold" name="IsSold">
 						<option value="n">Yes</option>
@@ -119,7 +121,7 @@
                     </select><br><br>
                     <input type="submit" name="submit" value="Submit" class="add_instrument_button">
                 </form><br>
-				<button class="add_instrument_button" onclick="overlayOff()">
+				<button class="cancel_instrument_button" onclick="overlayOff()">
 					Cancel
 				</button>
             </div>
@@ -127,6 +129,8 @@
 
         <div class="footer">
             <br>
+            <a href=""><p class="footer_text">About Us</p></a>
+            <a href=""><p class="footer_text">Contact Us</p></a>
             <br>
         </div>
     </div>

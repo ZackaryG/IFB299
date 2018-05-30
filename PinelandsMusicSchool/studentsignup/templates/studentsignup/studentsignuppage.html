@@ -14,12 +14,30 @@
     <div class="content_container">
         <div class="header">
 
-            <a href="/"><img src="../../../static/Pictures/Pinelands_Logo_Placeholder.jpg" alt="School logo" class="logo"></a>
+            <a href="/"><img src="../../../static/Pictures/Pinelands_Logo.png" alt="School logo" class="logo"></a>
 
             <div class="pinelands_title">
-                <h class="pinelands">Pinelands<br>Music<br>School</h>
+                <h class="pinelands">Pinelands Music School</h>
+                <h3 class="pinelandsquote">the academy that makes your musical dreams come true</h3>
             </div>
 
+            <div class="account_login">
+                 <div class="account_login_text">
+                    {% if user.is_authenticated %}
+                        {% if user.is_admin %}
+                            <p class="login_text">Admin</p>
+                        {% elif user.is_teacher %}
+                            <p class="login_text">Teacher</p>
+                        {% else %}
+                            <p class="login_text">Student</p>
+                        {% endif %}
+                        <a href=""><p class="login_text">{{ request.user.first_name }} {{ request.user.last_name }}</p></a>
+                        <a href="../login/logoutuser"><p class="login_text" >Log Out</p></a>
+                    {% else %}
+                        <a href="/login"><p class="login_text">Log In</p></a>
+                    {% endif %}
+                </div>
+            </div>
         </div>
 
         <ul class="nav_bar">
@@ -41,9 +59,7 @@
             <br>
             <button class="signup_button" onclick="overlayOn()">
 				Signup Now
-            </button>
-            <br>
-
+            </button><br><br>
             <br><h class="detail_header">Receive A Quality Education</h><br>
             <p class="detail_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum, ante id auctor facilisis, magna lacus vehicula sem, eget vulputate.</p>
             <br><h class="detail_header">Details and Cost</h><br>
@@ -60,23 +76,23 @@
                 <div class="signup_form">
                     <form action="add_student" method="POST" class="signup_form">
                         {% csrf_token %}
-                        First Name<input type="text" name="FirstName" required><br><br>
-                        Last Name<input type="text" name="LastName" required><br><br>
-                        Date of Birth<input type="date" name="DOB" required><br><br>
-                        <!--Street Number<input type="text" name="StreetNumber" required><br><br>
-                        Street Name<input type="text" name="StreetName" required><br><br>
-                        Suburb<input type="text" name="Suburb" required><br><br>
-                        Postcode<input type="number" name="Postcode" size="4" required><br><br>
-                        Gender<br>
+                        First Name <input type="text" name="FirstName" required><br><br>
+                        Last Name <input type="text" name="LastName" required><br><br>
+                        Date of Birth <input type="date" name="DOB" required><br><br>
+                        Street Number <input type="text" name="StreetNumber" required><br><br>
+                        Street Name <input type="text" name="StreetName" required><br><br>
+                        Suburb <input type="text" name="Suburb" required><br><br>
+                        Postcode <input type="number" name="Postcode" size="4" required><br><br>
+                        Gender <br>
                         <input type="radio" name="Gender" value="Other" checked>Other<br>
                         <input type="radio" name="Gender" value="Female">Female<br>
                         <input type="radio" name="Gender" value="Male">Male<br><br>
-                        Phone<input type="number" name="Phone" size="10" required><br><br>
-                        Facebook<input type="text" name="Facebook" required><br><br>-->
-                        Email<input type="email" name="Email" required><br><br>
-                        <!--Contact Preferance<input type="text" name="ContactPreferance" required><br><br>-->
-                        Password<input type="password" name="Password" required><br><br>
-                        <!--Confirm Password<input type="password" name="ConfirmPassword" required><br><br>-->
+                        Phone <input type="number" name="Phone" size="10" required><br><br>
+                        Facebook <input type="text" name="Facebook" required><br><br>
+                        Email <input type="email" name="Email" required><br><br>
+                        <!--Contact Preferance <input type="text" name="ContactPreferance" required><br><br>-->
+                        Password <input type="password" name="Password" required><br><br>
+                        <!--Confirm Password <input type="password" name="ConfirmPassword" required><br><br>-->
                         <input type="submit" name="submit" value="Submit" class="submit_button">
                     </form>
                     <button class="cancel_button" onclick="overlayOff()">
@@ -88,6 +104,8 @@
 
         <div class="footer">
             <br>
+            <a href=""><p class="footer_text">About Us</p></a>
+            <a href=""><p class="footer_text">Contact Us</p></a>
             <br>
         </div>
     </div>

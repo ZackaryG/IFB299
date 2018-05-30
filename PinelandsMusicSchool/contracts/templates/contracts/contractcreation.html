@@ -14,14 +14,15 @@
     <div class="content_container">
         <div class="header">
 
-            <a href="/"><img src="../../../static/Pictures/Pinelands_Logo_Placeholder.jpg" alt="School logo" class="logo"></a>
+            <a href="/"><img src="../../../static/Pictures/Pinelands_Logo.png" alt="School logo" class="logo"></a>
 
             <div class="pinelands_title">
-                <h class="pinelands">Pinelands<br>Music<br>School</h>
+                <h class="pinelands">Pinelands Music School</h>
+                <h3 class="pinelandsquote">the academy that makes your musical dreams come true</h3>
             </div>
 
             <div class="account_login">
-                <div class="account_login_text">
+                 <div class="account_login_text">
                     {% if user.is_authenticated %}
                         {% if user.is_admin %}
                             <p class="login_text">Admin</p>
@@ -31,7 +32,7 @@
                             <p class="login_text">Student</p>
                         {% endif %}
                         <a href=""><p class="login_text">{{ request.user.first_name }} {{ request.user.last_name }}</p></a>
-                        <a href="../login/logoutuser"><p class="login_text">Log Out</p></a>
+                        <a href="../login/logoutuser"><p class="login_text" >Log Out</p></a>
                     {% else %}
                         <a href="/login"><p class="login_text">Log In</p></a>
                     {% endif %}
@@ -57,14 +58,14 @@
             {% endif %}
         </ul>
 
-        <div class="contract_container">
+        <div class="signup_container">
 
              <br><h class="detail_header">Contracts Creation</h><br>
             <p class="detail_text">Please create contracts between teachers and students to send out to the respective pair, Thank you.</p>
             <button class="signup_button" onclick="overlayOn()">
 				Contract Creation
             </button>
-            <br>
+            <br><br>
            <br><h class="detail_header">Details and Extra Information</h><br>
             <p class="detail_text">Managers are to log each contract creation and make sure that it has been submitted.</p>
 	    </div>
@@ -73,31 +74,31 @@
             <div class="signup_form_container">
                 <div class="contract_form">
                     <form action="create_contract" class="contract_form" method="POST">
-                        {% csrf_token %}
-                        <select name="Teacher" required>
-                            {% for teacher in all_teachers %}
-                                <option name="Teacher" value="{{ teacher.id }}">{{ teacher.first_name }} {{ teacher.last_name }} {{ teacher.id }}</option>
-                            {% endfor %}
-                        </select><br><br>
-                        <select name="Student" required>
-                            {% for student in all_students %}
-                                <option name="Student" value="{{ student.id }}">{{ student.first_name }} {{ student.last_name }} {{ student.id }}</option>
-                            {% endfor %}
-                        </select><br><br>
-                        <!--Instrument Choice
-                        <select name="Instrument" required>
-                          <option value="Violin">Violin</option>
-                          <option value="Cello">Cello</option>
-                          <option value="Guitar">Guitar</option>
-                          <option value="Piano">Piano</option>
-                        </select><br><br>
-                        Contract Start Date <input type="date" name="StartDate" required><br><br>
-                        Contract End Date <input type="date" name="EndDate" required><br><br>
-                        Lesson Type <input type="text" name="Type" required><br><br>
-                        Lesson Duration <input type="number" name="Hours" required><br><br>
-                        Lesson Cost <input type="number" name="Cost" required><br><br>
-                        Lesson Quantity <input type="number" name="Quantity" required><br><br>
-                        Total Lesson Cost <input type="number" name="TotalCost" required><br><br>-->
+-                        {% csrf_token %}
+-                        <select name="Teacher" required>
+-                            {% for teacher in all_teachers %}
+-                                <option name="Teacher" value="{{ teacher.id }}">{{ teacher.first_name }} {{ teacher.last_name }} {{ teacher.id }}</option>
+-                            {% endfor %}
+-                        </select><br><br>
+-                        <select name="Student" required>
+-                            {% for student in all_students %}
+-                                <option name="Student" value="{{ student.id }}">{{ student.first_name }} {{ student.last_name }} {{ student.id }}</option>
+-                            {% endfor %}
+-                        </select><br><br>
+    -                        <!--Instrument ChoiceInstrument Choice
+                            <select name="Instrument" required>
+                              <option value="Violin">Violin</option>
+                              <option value="Cello">Cello</option>
+                              <option value="Guitar">Guitar</option>
+                              <option value="Piano">Piano</option>
+                            </select><br><br>
+                            Contract Start Date <input type="date" name="StartDate" required><br><br>
+                            Contract End Date <input type="date" name="EndDate" required><br><br>
+                            Lesson Type <input type="text" name="Type" required><br><br>
+                            Lesson Duration <input type="number" name="Hours" required><br><br>
+                            Lesson Cost <input type="number" name="Cost" required><br><br>
+                            Lesson Quantity <input type="number" name="Quantity" required><br><br>
+                            Total Lesson Cost <input type="number" name="TotalCost" required><br><br>-->
                         <input type="submit" name="submit" value="Submit" class="submit_button">
                     </form>
                     <button class="cancel_button" onclick="overlayOff()">
@@ -109,6 +110,8 @@
 
         <div class="footer">
             <br>
+            <a href=""><p class="footer_text">About Us</p></a>
+            <a href=""><p class="footer_text">Contact Us</p></a>
             <br>
         </div>
     </div>

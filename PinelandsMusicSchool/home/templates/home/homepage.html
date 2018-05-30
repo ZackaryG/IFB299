@@ -6,20 +6,21 @@
     <link rel="stylesheet" type="text/css" href="{% static 'global.css' %}" />
     <meta http-equiv="cache-control" content="no-cache">
     <meta charset="UTF-8">
-    <title>Pinelands Music School</title>
+    <title>Pineland Music School</title>
 </head>
 <body>
     <div class="content_container">
         <div class="header">
 
-            <a href=""><img src="../../../static/Pictures/Pinelands_Logo_Placeholder.jpg" alt="School logo" class="logo"></a>
+            <a href=""><img src="../../../static/Pictures/Pinelands_Logo.png" alt="School logo" class="logo"></a>
 
             <div class="pinelands_title">
-                <h class="pinelands">Pinelands<br>Music<br>School</h>
+                <h class="pinelands">Pinelands Music School</h>
+                <h3 class="pinelandsquote">the academy that makes your musical dreams come true</h3>
             </div>
 
             <div class="account_login">
-                <div class="account_login_text">
+                 <div class="account_login_text">
                     {% if user.is_authenticated %}
                         {% if user.is_admin %}
                             <p class="login_text">Admin</p>
@@ -29,7 +30,7 @@
                             <p class="login_text">Student</p>
                         {% endif %}
                         <a href=""><p class="login_text">{{ request.user.first_name }} {{ request.user.last_name }}</p></a>
-                        <a href="../login/logoutuser"><p class="login_text">Log Out</p></a>
+                        <a href="../login/logoutuser"><p class="login_text" >Log Out</p></a>
                     {% else %}
                         <a href="/login"><p class="login_text">Log In</p></a>
                     {% endif %}
@@ -60,24 +61,26 @@
         <div class="row">
 
             <div class="column">
-                <h class="section_header">Column One</h><br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum, ante id auctor facilisis, magna lacus vehicula sem, eget vulputate.
+                <h class="section_header">Students</h><br>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
             </div>
 
             <div class="column">
-                <h class="section_header">Column Two</h><br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum, ante id auctor facilisis, magna lacus vehicula sem, eget vulputate.
+                <h class="section_header">Teachers</h><br>
+                <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.</p>
             </div>
 
             <div class="column">
-                <h class="section_header">Column Three</h><br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum, ante id auctor facilisis, magna lacus vehicula sem, eget vulputate.
+                <h class="section_header">Instruments</h><br>
+                <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.</p>
             </div>
 
         </div>
 
         <div class="footer">
             <br>
+            <a href=""><p class="footer_text">About Us</p></a>
+            <a href=""><p class="footer_text">Contact Us</p></a>
             <br>
         </div>
     </div>

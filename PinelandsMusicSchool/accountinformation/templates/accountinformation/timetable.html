@@ -4,6 +4,8 @@
    {% load static %}
 
     <link rel="stylesheet" type="text/css" href="{% static 'global.css' %}" />
+    <script type ="text/javascript" src="../../static/accountinformation/functions.js"></script>
+    <!-- <script type ="text/javascript" href="{% static 'accountinformation/style.css' %}"></script> -->
     <meta http-equiv="cache-control" content="no-cache">
     <meta charset="UTF-8">
     <title>Pinelands Music School</title>
@@ -12,14 +14,15 @@
     <div class="content_container">
         <div class="header">
 
-            <a href="/"><img src="../../../static/Pictures/Pinelands_Logo_Placeholder.jpg" alt="School logo" class="logo"></a>
+            <a href="/"><img src="../../../static/Pictures/Pinelands_Logo.png" alt="School logo" class="logo"></a>
 
             <div class="pinelands_title">
-                <h class="pinelands">Pinelands<br>Music<br>School</h>
+                <h class="pinelands">Pinelands Music School</h>
+                <h3 class="pinelandsquote">the academy that makes your musical dreams come true</h3>
             </div>
 
-            <div class="account_login">
-                <div class="account_login_text">
+           <div class="account_login">
+                 <div class="account_login_text">
                     {% if user.is_authenticated %}
                         {% if user.is_admin %}
                             <p class="login_text">Admin</p>
@@ -29,7 +32,7 @@
                             <p class="login_text">Student</p>
                         {% endif %}
                         <a href=""><p class="login_text">{{ request.user.first_name }} {{ request.user.last_name }}</p></a>
-                        <a href="../login/logoutuser"><p class="login_text">Log Out</p></a>
+                        <a href="../login/logoutuser"><p class="login_text" >Log Out</p></a>
                     {% else %}
                         <a href="/login"><p class="login_text">Log In</p></a>
                     {% endif %}
@@ -56,7 +59,7 @@
         </ul>
 
         <div class="account_header">
-            <h class="account_header_title">Kermit's Timetable</h>
+            <h class="account_header_title">{{ request.user.first_name }}'s Timetable</h>
         </div>
 
         <ul class="nav_bar">
@@ -68,11 +71,37 @@
         </ul>
 
         <div class="detail_container">
-            <br><h class="detail_header">Insert Timetable Here</h><br>
+            <br><h class="detail_header">Your Timetable will appear here after your schedule is set up.</h><br><br>
+            <button class="signup_button" onclick="overlayOn()">
+            Add Availability
+            </button><br>
+        </div>
+
+        <div id="overlay">
+            <div class="signup_form_container">
+                <div class="signup_form">
+                    <form onsubmit="formComplete()" class="signup_form">
+                        Available Days<br><input type="checkbox" name="Monday" value="mon">Monday<br>
+                        <input type="checkbox" name="Tuesday" value="tue">Tuesday<br>
+                        <input type="checkbox" name="Wednesday" value="wed">Wednesday<br>
+                        <input type="checkbox" name="Thursday" value="thu">Thursday<br>
+                        <input type="checkbox" name="Friday" value="fri">Friday<br>
+                        <input type="checkbox" name="Saturday" value="sat">Saturday<br>
+                        <input type="checkbox" name="Sunday" value="sun">Sunday<br><br>
+                        Available Times <br><textarea name="Text1" cols="40" rows="5">e.g. Monday 3pm - 5pm.</textarea><br><br>
+                        <input type="submit" name="submit" value="Submit" class="submit_button">
+                    </form>
+                    <button class="cancel_button" onclick="overlayOff()">
+                        Cancel
+                    </button>
+                </div>
+            </div>
         </div>
 
         <div class="footer">
             <br>
+            <a href=""><p class="footer_text">About Us</p></a>
+            <a href=""><p class="footer_text">Contact Us</p></a>
             <br>
         </div>
     </div>
