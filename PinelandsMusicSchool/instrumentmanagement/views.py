@@ -22,8 +22,12 @@ def add_instrument(request):
         available = request.POST.get('Available')
         rentalPrice = request.POST.get('RentalPrice')
         salePrice = request.POST.get('SalePrice')
+        assignedStudent = request.POST.get('AssignedStudent')
+        isSold = request.POST.get('IsSold')
 
-        i = Instrument(type=type, size=size, quality=quality, available=available, rentalPrice=rentalPrice, salePrice=salePrice)
+        i = Instrument(type=type, size=size, quality=quality, available=available,
+                       rental_price=rentalPrice, sale_price=salePrice,
+                       assigned_student=assignedStudent, is_sold=isSold)
         i.save()
         return HttpResponseRedirect(reverse('instrumentmanagement'))
     else:

@@ -68,9 +68,10 @@
                     <th>Instrument</th>
                     <th>Size</th>
                     <th>Condition</th>
-                    <th>Available</th>
                     <th>Rental Price</th>
                     <th>Sale Price</th>
+                    <th>Assigned Student</th>
+                    <th>Is Sold</th>
                 </tr>
 
                 <!-- This will be filled from the DB and contained in a for loop once the DB is in -->
@@ -80,9 +81,10 @@
                     <td>{{ instrument.type }}</td>
                     <td>{{ instrument.size }}</td>
                     <td>{{ instrument.quality }}</td>
-                    <td>{{ instrument.available }}</td>
-                    <td>{{ instrument.rentalPrice }}</td>
-                    <td>{{ instrument.salePrice }}</td>
+                    <td>{{ instrument.rental_price }}</td>
+                    <td>{{ instrument.sale_price }}</td>
+                    <td>{{ instrument.assigned_student }}</td>
+                    <td>{{ instrument.is_sold }}</td>
                     <!-- Can add this to allow managers to update the table once permissions are a go -->
                     <td><a href="remove_instrument/{{ instrument.id }}">Remove</a></td>
                 </tr>
@@ -102,10 +104,20 @@
                     {% csrf_token %}
                     Instrument<input type="text" name="Instrument" required><br><br>
                     Size<input type="text" name="Size" required><br><br>
-                    Condition<input type="text" name="Condition" required><br><br>
-                    Available<input type="text" name="Available" required><br><br>
-                    Rental Price<input type="text" name="RentalPrice" required><br><br>
-                    Sale Price<input type="text" name="SalePrice" required><br><br>
+                    Condition
+                    <select id="Condition" name="Condition">
+						<option value="n">New</option>
+						<option value="u">Used</option>
+						<option value="p">Unspecified</option>
+                    </select><br><br>
+                    Rental Price<input type="number" name="RentalPrice" required><br><br>
+                    Sale Price<input type="number" name="SalePrice" required><br><br>
+                    Assigned Student<input type="text" name="AssignedStudent" required><br><br>
+                    Is Sold
+                    <select id="IsSold" name="IsSold">
+						<option value="n">Yes</option>
+						<option value="u">No</option>
+                    </select><br><br>
                     <input type="submit" name="submit" value="Submit" class="add_instrument_button">
                 </form><br>
 				<button class="add_instrument_button" onclick="overlayOff()">
