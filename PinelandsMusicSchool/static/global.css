@@ -135,11 +135,23 @@ h.section_header {
 
 /* https://www.w3schools.com/howto/howto_css_three_columns.asp */
 .column {
+    text-align:justify;
     background-color: #be7979;
     width: 30%;
+    height: 150px;
 	float: left;
     padding:1.66%;
+    overflow: scroll;
+    overflow-x: hidden;
 }
+.column p {
+    margin-bottom:10px;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
 @media screen and (max-width: 600px) {
     .column {
         width: 100%;
